@@ -1,0 +1,19 @@
+/* wrappers class style */
+.wrapper {
+    width: 100%;
+}
+
+.art_wrapper {
+    width: 700px;
+    margin: auto;
+}
+
+/* Elements class style */
+.left_img {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.center_img {
+    text-align: center;
+}
