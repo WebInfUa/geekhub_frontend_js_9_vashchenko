@@ -3,16 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Home Work 1-2</title>
-  <style>
-    .wrapper {
-      width: 750px;
-      margin: auto;
-    }
-
-    .cont_center {
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="wrapper">
   <header>
@@ -26,37 +17,33 @@
 
   <main>
     <!-- Form START -->
-    <form method="post">
+    <form class="form_style" method="post">
       <fieldset>
         <legend>Коротко о себе</legend>
-        <p><label for="name">Имя: </label><input type="text" id="name" name="firstName" maxlength="20"></p>
-        <p><label for="sec_name">Фамилия: </label><input type="text" id="sec_name" name="secondName" maxlength="30"></p>
-        <p>Пол:<input type="radio" id="male" name="sex" value="male" checked><label for="male">мужской</label>
-          <input type="radio" id="female" name="sex" value="female"><label for="female">женский</label></p>
-        <p><label for="age">Возраст: </label><input type="number" min="1" max="150" step="1" id="age" name="howOld"> лет</p>
+        <div><label for="name">Имя: </label><input type="text" id="name" name="firstName" maxlength="20"></div>
+        <div><label for="sec_name">Фамилия: </label><input type="text" id="sec_name" name="secondName" maxlength="30"></div>
+        <div>Пол: <input type="radio" id="male" name="sex" value="male" checked><label for="male">мужской</label>
+          <input type="radio" id="female" name="sex" value="female"><label for="female">женский</label></div>
+        <div><label for="age">Возраст: </label><input type="number" min="1" max="150" step="1" id="age" name="howOld"> лет</div>
       </fieldset>
       <!--Block 1 end-->
 
       <br>
       <fieldset>
         <legend>Коротко о себе</legend>
-        <p><input type="radio" id="boy" name="gender" value="male" checked><label for="boy">Молодой человек</label></p>
-        <p><input type="radio" id="girl" name="gender" value="female"><label for="girl">Девушка</label></p>
-        <p><input type="number" id="birthday" name="Birthday"><label for="birthday"> Дата рождения</label><br>
+        <div><input type="radio" id="boy" name="gender" value="male" checked><label for="boy">Молодой человек</label></div>
+        <div><input type="radio" id="girl" name="gender" value="female"><label for="girl">Девушка</label></div>
+        <div><input type="number" id="birthday" name="Birthday"><label for="birthday"> Дата рождения</label><br>
         <input type="text" id="married" name="marriedStatus" maxlength="20"><label for="married"> Семейное положение</label><br>
         <input type="text" id="social_status" name="socialStatus" maxlength="30"><label for="social_status"> Социальный статус</label><br>
-        <input type="text" id="location" name="livingLocation" maxlength="100"><label for="location"> Местожительство</label></p>
-        <!-- Main social information End -->
-
+        <input type="text" id="location" name="livingLocation" maxlength="100"><label for="location"> Местожительство</label></div>
         <p><b>Что вы обычно делаете на выходных:</b></p>
-        <p><input type="checkbox" id="sleep" name="hobbies" value="sleeping"><label for="sleep">Сплю</label></p>
-        <p><input type="checkbox" id="friends" name="hobbies" value="communication"><label for="friends">Гуляю с друзьями</label></p>
-        <p><input type="checkbox" id="fishing" name="hobbies" value="relax"><label for="fishing">Хожу на рыбалку</label></p>
-        <p><input type="checkbox" id="games" name="hobbies" value="loseTime"><label for="games">Играю в игры</label></p>
-        <!-- Hobbies end -->
-
+        <div><input type="checkbox" id="sleep" name="hobbies" value="sleeping"><label for="sleep">Сплю</label></div>
+        <div><input type="checkbox" id="friends" name="hobbies" value="communication"><label for="friends">Гуляю с друзьями</label></div>
+        <div><input type="checkbox" id="fishing" name="hobbies" value="relax"><label for="fishing">Хожу на рыбалку</label></div>
+        <div><input type="checkbox" id="games" name="hobbies" value="loseTime"><label for="games">Играю в игры</label></div>
         <p><b>Расказать о формах в книге, посвященной HTML:</b></p>
-        <p><label for="htmlSite" hidden>Choose the site</label>
+        <div><label for="htmlSite" hidden>Choose the site</label>
         <select id="htmlSite" name="htmlSite">
             <option disabled selected>Site frequency:</option>
             <option value="html5">html5.com</option>
@@ -64,21 +51,15 @@
             <option value="w3school">w3school.com</option>
             <option value="mozilla">developer.mozilla.com</option>
           </select>
-        </p>
-        <!-- Select site End -->
-
+        </div>
         <p><b>Сколько книг вы прочитали за свою жизнь:</b></p>
-        <p><input type="radio" id="book10" name="bookRead" value="male"><label for="book10">0-10</label></p>
-        <p><input type="radio" id="book20" name="bookRead" value="female"><label for="book20">11-20</label></p>
-        <p><input type="radio" id="book50" name="bookRead" value="female"><label for="book50">21-50</label></p>
-        <p><input type="radio" id="book+" name="bookRead" value="female"><label for="book+">50+</label></p>
-        <!--Books radio End-->
-
-        <p><label for="comments"><b>Ваши коментарии:</b></label><br>
-        <textarea id="comments" name="commentaries" rows="8" cols="62" wrap="hard"></textarea></p>
-        <!-- Comment text area End -->
-
-        <p><label for="position" hidden>What mean the position?</label>
+        <div><input type="radio" id="book10" name="bookRead" value="male"><label for="book10">0-10</label></div>
+        <div><input type="radio" id="book20" name="bookRead" value="female"><label for="book20">11-20</label></div>
+        <div><input type="radio" id="book50" name="bookRead" value="female"><label for="book50">21-50</label></div>
+        <div><input type="radio" id="book+" name="bookRead" value="female"><label for="book+">50+</label></div>
+        <div><label for="comments"><b>Ваши коментарии:</b></label><br>
+        <textarea id="comments" name="commentaries" rows="8" cols="62" wrap="hard"></textarea></div>
+        <div><label for="position" hidden>What mean the position?</label>
           <select id="position" name="listPosition" multiple="multiple" size="3" >
             <option>Первая позиция</option>
             <option selected="selected">Вторая позиция</option>
@@ -86,41 +67,28 @@
             <option>Четвертая позиция</option>
             <option>Пятая позиция</option>
           </select>
-        </p>
-        <!--Multiple select end-->
-
+        </div>
       </fieldset>
-      <!-- Block 2 End-->
 
       <br>
       <fieldset>
         <legend><b>И в заключении</b></legend>
-        <p><label for="introduce" hidden>Strange field</label><input type="text" id="introduce" name="introduceField" placeholder="Это поле было введено до вас" size="30"></p>
-        <!-- Some input field -->
-
-        <p><label for="email"><b>Email:</b></label><br>
+        <div><label for="introduce" hidden>Strange field</label><input type="text" id="introduce" name="introduceField" placeholder="Это поле было введено до вас" size="30"></div>
+        <div><label for="email"><b>Email:</b></label><br>
         <input type="email" id="email" name="mail" size="30" maxlength="50">
-        </p>
-        <!-- Email block -->
-
+        </div>
         <p><b>Хотите подписаться на самую модную рассылку спама?</b><br><i>Выберите категории</i></p>
-        <p><input type="checkbox" id="spam1" name="spams" value="spam1day"><label for="spam1">Оборудование</label></p>
-        <p><input type="checkbox" id="spam2" name="spams" value="spam3day"><label for="spam2">Как приготовить обеды</label></p>
-        <p><input type="checkbox" id="spam3" name="spams" value="spamEveryDay"><label for="spam3">Заработай миллион за два дня!</label></p>
-      <!-- Spam block -->
-
+        <div><input type="checkbox" id="spam1" name="spams" value="spam1day"><label for="spam1">Оборудование</label></div>
+        <div><input type="checkbox" id="spam2" name="spams" value="spam3day"><label for="spam2">Как приготовить обеды</label></div>
+        <div><input type="checkbox" id="spam3" name="spams" value="spamEveryDay"><label for="spam3">Заработай миллион за два дня!</label></div>
         <p><b>На сколько сложная задача:</b></p>
-        <p><input type="radio" id="easy" name="difficulties" value="sucker" checked><label for="easy">Совсем нет</label><br>
+        <div><input type="radio" id="easy" name="difficulties" value="sucker" checked><label for="easy">Совсем нет</label><br>
         <input type="radio" id="medium" name="difficulties" value="master"><label for="medium">Так себе</label><br>
-        <input type="radio" id="hard" name="difficulties" value="maestro"><label for="hard">Еле справились</label></p>
-        <!-- Level of difficulties End-->
-
+        <input type="radio" id="hard" name="difficulties" value="maestro"><label for="hard">Еле справились</label></div>
       </fieldset>
-      <!-- Block 3 End -->
 
-      <p><input type="submit" id="submit" value="Отправить"/></p>
+      <div><input type="submit" id="submit" value="Отправить"/></div>
     </form>
-    <!-- Form END! -->
   </main>
 
   <footer>

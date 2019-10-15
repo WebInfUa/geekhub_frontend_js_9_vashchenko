@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.cont_center {
+    text-align: center;
+}
+
+.form_style div {
+    margin-top: 10px;
+}
