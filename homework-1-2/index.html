@@ -13,38 +13,32 @@
     <h2>Раскажите немного о себе...</h2>
     <p>Поробуйте создать аналогичную форму. Для целей демонстрации вполне подойдут и вымышленные</p>
   </header>
-  <!-- Page header end-->
-
   <main>
-    <!-- Form START -->
-    <form class="form_style" method="post">
+    <form class="form_style" name="testForm" action="#" method="post">
       <fieldset>
-        <legend>Коротко о себе</legend>
+        <legend><h3>Коротко о себе</h3></legend>
         <div><label for="name">Имя: </label><input type="text" id="name" name="firstName" maxlength="20"></div>
         <div><label for="sec_name">Фамилия: </label><input type="text" id="sec_name" name="secondName" maxlength="30"></div>
         <div>Пол: <input type="radio" id="male" name="sex" value="male" checked><label for="male">мужской</label>
           <input type="radio" id="female" name="sex" value="female"><label for="female">женский</label></div>
-        <div><label for="age">Возраст: </label><input type="number" min="1" max="150" step="1" id="age" name="howOld"> лет</div>
+        <div><label for="age">Возраст: <input type="number" min="1" max="150" size="3" step="1" id="age" name="howOld"> лет</label></div>
       </fieldset>
-      <!--Block 1 end-->
-
       <br>
       <fieldset>
-        <legend>Коротко о себе</legend>
+        <legend><h3>Коротко о себе</h3></legend>
         <div><input type="radio" id="boy" name="gender" value="male" checked><label for="boy">Молодой человек</label></div>
         <div><input type="radio" id="girl" name="gender" value="female"><label for="girl">Девушка</label></div>
-        <div><input type="number" id="birthday" name="Birthday"><label for="birthday"> Дата рождения</label><br>
-        <input type="text" id="married" name="marriedStatus" maxlength="20"><label for="married"> Семейное положение</label><br>
-        <input type="text" id="social_status" name="socialStatus" maxlength="30"><label for="social_status"> Социальный статус</label><br>
-        <input type="text" id="location" name="livingLocation" maxlength="100"><label for="location"> Местожительство</label></div>
+        <div><input type="number" id="birthday" name="Birthday"><label for="birthday"> Дата рождения</label></div>
+        <div><input type="text" id="married" name="marriedStatus" maxlength="20"><label for="married"> Семейное положение</label></div>
+        <div><input type="text" id="social_status" name="socialStatus" maxlength="30"><label for="social_status"> Социальный статус</label></div>
+        <div><input type="text" id="location" name="livingLocation" maxlength="100"><label for="location"> Местожительство</label></div>
         <p><b>Что вы обычно делаете на выходных:</b></p>
-        <div><input type="checkbox" id="sleep" name="hobbies" value="sleeping"><label for="sleep">Сплю</label></div>
-        <div><input type="checkbox" id="friends" name="hobbies" value="communication"><label for="friends">Гуляю с друзьями</label></div>
-        <div><input type="checkbox" id="fishing" name="hobbies" value="relax"><label for="fishing">Хожу на рыбалку</label></div>
-        <div><input type="checkbox" id="games" name="hobbies" value="loseTime"><label for="games">Играю в игры</label></div>
-        <p><b>Расказать о формах в книге, посвященной HTML:</b></p>
-        <div><label for="htmlSite" hidden>Choose the site</label>
-        <select id="htmlSite" name="htmlSite">
+        <div><input type="checkbox" id="sleep" name="hobbies[]" value="sleeping"><label for="sleep">Сплю</label></div>
+        <div><input type="checkbox" id="friends" name="hobbies[]" value="communication"><label for="friends">Гуляю с друзьями</label></div>
+        <div><input type="checkbox" id="fishing" name="hobbies[]" value="relax"><label for="fishing">Хожу на рыбалку</label></div>
+        <div><input type="checkbox" id="games" name="hobbies[]" value="loseTime"><label for="games">Играю в игры</label></div>
+        <div><label for="htmlSite"><b>Расказать о формах в книге, посвященной HTML:</b></label></div>
+        <div><select id="htmlSite" name="htmlSite">
             <option disabled selected>Site frequency:</option>
             <option value="html5">html5.com</option>
             <option value="mdn">mdn.com</option>
@@ -53,12 +47,12 @@
           </select>
         </div>
         <p><b>Сколько книг вы прочитали за свою жизнь:</b></p>
-        <div><input type="radio" id="book10" name="bookRead" value="male"><label for="book10">0-10</label></div>
-        <div><input type="radio" id="book20" name="bookRead" value="female"><label for="book20">11-20</label></div>
-        <div><input type="radio" id="book50" name="bookRead" value="female"><label for="book50">21-50</label></div>
-        <div><input type="radio" id="book+" name="bookRead" value="female"><label for="book+">50+</label></div>
-        <div><label for="comments"><b>Ваши коментарии:</b></label><br>
-        <textarea id="comments" name="commentaries" rows="8" cols="62" wrap="hard"></textarea></div>
+        <div><input type="radio" id="book10" name="bookRead" value="book_0"><label for="book10">0-10</label></div>
+        <div><input type="radio" id="book20" name="bookRead" value="book_20"><label for="book20">11-20</label></div>
+        <div><input type="radio" id="book50" name="bookRead" value="book_50"><label for="book50">21-50</label></div>
+        <div><input type="radio" id="book+" name="bookRead" value="book_more"><label for="book+">50+</label></div>
+        <div><label for="comments"><b>Ваши коментарии:</b></label></div>
+        <div><textarea id="comments" name="commentaries" rows="8" cols="62" wrap="hard"></textarea></div>
         <div><label for="position" hidden>What mean the position?</label>
           <select id="position" name="listPosition" multiple="multiple" size="3" >
             <option>Первая позиция</option>
@@ -72,22 +66,21 @@
 
       <br>
       <fieldset>
-        <legend><b>И в заключении</b></legend>
-        <div><label for="introduce" hidden>Strange field</label><input type="text" id="introduce" name="introduceField" placeholder="Это поле было введено до вас" size="30"></div>
-        <div><label for="email"><b>Email:</b></label><br>
-        <input type="email" id="email" name="mail" size="30" maxlength="50">
-        </div>
+        <legend><h3>И в заключении</h3></legend>
+        <div><label for="introduce" hidden>Strange field</label><input type="text" id="introduce" name="introduceField" value="Это поле было введено до вас" size="30"></div>
+        <div><label for="email"><b>Email:</b></label></div>
+        <div><input type="email" id="email" name="mail" size="30" maxlength="50"></div>
         <p><b>Хотите подписаться на самую модную рассылку спама?</b><br><i>Выберите категории</i></p>
-        <div><input type="checkbox" id="spam1" name="spams" value="spam1day"><label for="spam1">Оборудование</label></div>
-        <div><input type="checkbox" id="spam2" name="spams" value="spam3day"><label for="spam2">Как приготовить обеды</label></div>
-        <div><input type="checkbox" id="spam3" name="spams" value="spamEveryDay"><label for="spam3">Заработай миллион за два дня!</label></div>
+        <div><input type="checkbox" id="spam1" name="spams[]" value="spam1day"><label for="spam1">Оборудование</label></div>
+        <div><input type="checkbox" id="spam2" name="spams[]" value="spam3day"><label for="spam2">Как приготовить обеды</label></div>
+        <div><input type="checkbox" id="spam3" name="spams[]" value="spamEveryDay"><label for="spam3">Заработай миллион за два дня!</label></div>
         <p><b>На сколько сложная задача:</b></p>
-        <div><input type="radio" id="easy" name="difficulties" value="sucker" checked><label for="easy">Совсем нет</label><br>
-        <input type="radio" id="medium" name="difficulties" value="master"><label for="medium">Так себе</label><br>
-        <input type="radio" id="hard" name="difficulties" value="maestro"><label for="hard">Еле справились</label></div>
+        <div><input type="radio" id="easy" name="difficulties" value="sucker" checked><label for="easy">Совсем нет</label></div>
+        <div><input type="radio" id="medium" name="difficulties" value="master"><label for="medium">Так себе</label></div>
+        <div><input type="radio" id="hard" name="difficulties" value="maestro"><label for="hard">Еле справились</label></div>
       </fieldset>
 
-      <div><input type="submit" id="submit" value="Отправить"/></div>
+      <button type="submit" id="submit">Send</button>
     </form>
   </main>
 
