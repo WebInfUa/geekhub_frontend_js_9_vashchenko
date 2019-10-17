@@ -17,5 +17,10 @@
     "landing"
   ],
   "author": "Vashchenko Oleksandr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.23.0"
+  },
+  "devDependencies": {
+  }
 }
