@@ -102,41 +102,75 @@ h4 {
 .nav_menu {
   height: 100%;
   max-height: 20px;
+}
+.nav_menu button {
   display: flex;
   flex-direction: column;
   justify-content: right;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 25px;
+  height: 19px;
+  margin: 31px 5% 0 auto;
 }
-.nav_menu img {
+.nav_menu button:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.nav_menu button img {
   width: 25px;
   height: 19px;
   filter: alpha(Opacity=75);
   opacity: 0.75;
-  margin: 31px 5% 0 auto;
 }
-.nav_menu img:hover {
+.nav_menu button img:hover {
   filter: alpha(Opacity=100);
   opacity: 1;
 }
-.nav_menu ul {
-  display: none;
-  list-style: none;
-  background-color: #ffffff;
-}
-.nav_menu ul li {
-  margin: 5px;
-}
-.nav_menu ul li a {
-  text-decoration: none;
-  color: #919191;
-}
-.nav_menu ul li a:hover {
-  color: #252525;
-}
-.nav_menu:hover ul {
-  display: block;
+.nav_menu .modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  background-color: dimgray;
   width: 100%;
-  max-width: 120px;
-  margin: 0 5% 0 auto;
+  min-width: 1000px;
+  height: 100%;
+  min-height: 600px;
+  border-radius: 10px;
+  text-align: center;
+}
+.nav_menu .modal ul li {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 98px;
+}
+.nav_menu .modal ul li a {
+  text-decoration: none;
+  color: #d2d2d2;
+}
+.nav_menu .modal ul li a:hover {
+  color: #3677fd;
+}
+.nav_menu .modal .social {
+  width: 287px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.nav_menu .modal .social a {
+  height: 50px;
+  width: 50px;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.nav_menu .modal .social a:hover {
+  background-color: #3684fe;
+}
+.nav_menu .modal .social a img {
+  margin: 0 auto;
 }
 
 .avatar_img {
