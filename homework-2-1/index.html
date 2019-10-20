@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>homework-2-1</title>
@@ -48,10 +48,22 @@
       <h2>for graphic designers</h2>
     </div>
     <section class="description wrapper-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictaunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
     </section>
-    <div class="hire_head">
-      <button class="hire_head" type="button" name="hireMe" value="hireMeHeader">hire me</button>
+    <div class="hire_head wrapper-content">
+      <button type="button" name="hireMe" value="hireMeHeader">hire me</button>
+      <div class="modal_hire">
+        <h3>hire me</h3>
+        <form id="hireMe" name="hireMe" action="#" method="post">
+          <label hidden for="name"></label>
+          <input id="name" name="userName" type="text" maxlength="100" placeholder="Your Name">
+          <label hidden for="mail"></label>
+          <input id="mail" name="eMail" type="email" maxlength="50" placeholder="Your E-Mail">
+          <label hidden for="message"></label>
+          <textarea id="message"  name="message" type="text" maxlength="500" cols="70" rows="8" placeholder="Your Message"></textarea>
+          <button form="hireMe" type="submit">send message</button>
+        </form>
+      </div>
     </div>
     <div class="arrow wrapper-content">
       <a href="#aboutMe" title="Arrow link About Me"><img src="img/arrow.png"></a>
@@ -132,7 +144,7 @@
             <img src="img/Work_1.png" alt="work project 1"/>
         </div>
         <div>
-            <img src="img/Work_2.png" width="369" height="269"  alt="work project 2"/>
+            <img src="img/Work_2.png" alt="work project 2"/>
         </div>
         <div>
             <img src="img/Work_3.png" alt="work project 3"/>
