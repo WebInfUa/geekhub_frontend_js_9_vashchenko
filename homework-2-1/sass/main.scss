@@ -370,5 +370,9 @@ h4 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.4px;
+    &:hover{
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
   }
 }
