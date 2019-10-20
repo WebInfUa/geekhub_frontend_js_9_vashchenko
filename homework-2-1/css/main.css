@@ -133,9 +133,9 @@ h4 {
   transition: 0.3s ease-in-out;
   background-color: dimgray;
   width: 100%;
-  min-width: 1000px;
+  min-width: 1173px;
   height: 100%;
-  min-height: 600px;
+  min-height: 704px;
   border-radius: 10px;
   text-align: center;
 }
@@ -157,6 +157,8 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 76px 54px 0;
+  border-top: 2px solid #194277;
 }
 .nav_menu .modal .social a {
   height: 50px;
