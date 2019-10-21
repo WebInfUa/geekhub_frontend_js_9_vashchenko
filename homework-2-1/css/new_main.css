@@ -17,9 +17,21 @@ body {
 }
 
 h1 {
+    width: 100%;
+    max-width: 810px;
+    height: 100%;
+    max-height: 120px;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 53px auto 22px;
 }
 
 h2 {
+
 }
 
 h3 {
@@ -221,6 +233,5 @@ h3 {
     display: flex;
     align-items: center;
 }
-
 
 /*Header END*/
