@@ -5,7 +5,6 @@
   <title>homework-2-1</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/new_main.css">
-  <!--<link rel="stylesheet" href="css/main.css">-->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
 
 </head>
@@ -53,42 +52,43 @@
       <section class="description wrapper">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictaunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
       </section>
-      <div class="hire_head wrapper-content">
-        <button type="button" name="hireMe" value="hireMeHeader">hire me</button>
+      <div class="hire_head wrapper">
+        <button class="hire_head_btn" type="button" name="hireMe" value="hireMeHeader">hire me</button>
         <div class="modal_hire">
-          <h3>hire me</h3>
-          <form id="hireMe" name="hireMe" action="#" method="post">
+          <h2>hire me</h2>
+          <form class="hire_form" id="hireMe" name="hireMe" action="#" method="post">
             <label hidden for="name"></label>
             <input id="name" name="userName" type="text" maxlength="100" placeholder="Your Name">
             <label hidden for="mail"></label>
             <input id="mail" name="eMail" type="email" maxlength="50" placeholder="Your E-Mail">
             <label hidden for="message"></label>
             <textarea id="message"  name="message" maxlength="500" cols="70" rows="8" placeholder="Your Message"></textarea>
-            <button form="hireMe" type="submit">send message</button>
+            <button form="hireMe" name="hireMe" type="submit">send message</button>
           </form>
         </div>
       </div>
-      <div class="arrow wrapper-content">
+      <div class="arrow wrapper">
         <a href="#aboutMe" title="Arrow link About Me"><img src="img/arrow.png"></a>
       </div>
     </div>
   </header>
-  <main class="wrapper">
-    <section id="aboutMe" class="about_me wrapper-content">
-      <h3>about me</h3>
+
+  <main>
+    <section id="aboutMe" class="about_me wrapper">
+      <h2>about me</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </p>
     </section>
+
     <section id="expertIn" class="expert">
-      <div class="wrapper-content">
-        <h3>expert in</h3>
-        <section>
+        <h2>expert in</h2>
+        <section class="expert_block wrapper">
           <div>
             <div class="circle_img">
               <object type="image/svg+xml" data="svg/mobile-app.svg" width="45" height="66" name="mobileAppDesign">
                 <img src="img/mobile-app.png" width="45" height="66" alt="Mobile app design logo"/>
               </object>
             </div>
-            <h4>mobille app design</h4>
+            <h3>mobille app design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation . ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </p>
           </div>
           <div>
@@ -97,7 +97,7 @@
                 <img src="img/web-design.png" width="72" height="58" alt="Web Design logo"/>
               </object>
             </div>
-            <h4>web design</h4>
+            <h3>web design</h3>
             <p class="expert_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </p>
           </div>
           <div>
@@ -106,18 +106,18 @@
                 <img src="img/web-dev.png" width="58" height="66" alt="Web Development logo"/>
               </object>
             </div>
-            <h4>web development</h4>
+            <h3>web development</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
           </div>
         </section>
-        <section>
+        <section class="expert_block wrapper">
           <div>
             <div class="circle_img">
               <object type="image/svg+xml" data="svg/product.svg" width="71" height="67" name="webDevelop">
                 <img src="img/product.png" width="71" height="67" alt="Web Development logo"/>
               </object>
             </div>
-            <h4>product design</h4>
+            <h3>product design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation . ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </p>
           </div>
           <div>
@@ -126,7 +126,7 @@
                 <img src="img/ux-ui.png" width="63" height="63" alt="UX and UI logo"/>
               </object>
             </div>
-            <h4>ux & ui</h4>
+            <h3>ux & ui</h3>
             <p class="expert_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </p>
           </div>
           <div>
@@ -135,15 +135,15 @@
                 <img src="img/animation.png" width="78" height="65" alt="Animation logo"/>
               </object>
             </div>
-            <h4>animation</h4>
+            <h3>animation</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
           </div>
         </section>
-      </div>
     </section>
-    <section id="latestWork" class="latest_work wrapper-content">
-      <h3>latest work</h3>
-      <section>
+
+    <section id="latestWork" class="latest_work wrapper">
+      <h2>latest work</h2>
+      <section class="latest_img">
         <div>
             <img src="img/Work_1.png" alt="work project 1"/>
         </div>
@@ -154,7 +154,7 @@
             <img src="img/Work_3.png" alt="work project 3"/>
         </div>
       </section>
-      <section>
+      <section class="latest_img">
         <div>
             <img src="img/Work_4.png" alt="work project 4"/>
         </div>
@@ -166,9 +166,10 @@
         </div>
       </section>
     </section>
+
     <section id="clients" class="clients">
-      <div class="wrapper-content">
-        <h3>clients</h3>
+      <div class="wrapper">
+        <h2>clients</h2>
         <div class="corp">
             <a href="#clients" title="Link to the microsoft corporation"><img src="img/microsoft_logo.png" alt="microsoft corporation logo"/></a>
             <a href="#clients" title="Link to the samsung corporation"><img src="img/samsung_logo.png" alt="samsung corporation logo"/></a>
@@ -178,10 +179,10 @@
       </div>
     </section>
   </main>
-  <footer class="wrapper">
-    <div class="footer_page wrapper-content">
-      <p>Need a graphic designer? <span>Ready to work!</span></p>
-      <button>hire me</button>
+  <footer>
+    <div class="footer_page wrapper">
+      <p class="footer_page_text">Need a graphic designer? <span>Ready to work!</span></p>
+      <button type="submit" name="hireMe" class="hire_footer_btn">hire me</button>
     </div>
   </footer>
 </body>
