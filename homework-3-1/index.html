@@ -9,34 +9,36 @@
 
 </head>
 <body>
-<header class="main_header" style="background-image:url(src/img/header.png);">
-  <section>
-    <div>
+<header class="main_header fc" style="background-image:url(src/img/header.png);">
+  <section class="header_bar fr">
+    <div class="header_logo fr">
       <object type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
         <img src="src/img/icon/logo.png" width="40" height="39" align="left" alt="Fork application logo">
       </object>
       <h1>fork<span>io</span></h1>
     </div>
-    <div>
-      <nav>
+    <div class="header_nav_block fr">
+      <nav class="header_nav fr">
         <a>Overview</a>
         <a>About fork</a>
         <a>Buying options</a>
         <a>Support</a>
       </nav>
-      <button class="app_btn" type="submit" id="buy" name="buyApp_btn">buy now</button>
+    <button class="app_btn buy_btn" type="submit" id="buy" name="buyApp_btn">buy now</button>
     </div>
   </section>
-  <section>
+  <section class="text_center header_content">
     <h2>fork app</h2>
     <p>A real gamechanger in the world of web-development</p>
-    <p>v. 2.8 For Mac and Windows</p>
+    <p class="header_sub_content">v. 2.8 For Mac and Windows</p>
   </section>
-  <button class="app_btn" type="button" id="trial" name="trial_btn">Download for free now</button>
-  <p>unlimited 30-days trial period</p>
+  <section class="download_section text_center">
+    <button class="app_btn" type="button" id="trial" name="trial_btn">Download for free now</button>
+    <p>unlimited 30-days trial period</p>
+  </section>
 </header>
 <main>
-  <section>
+  <section class="revolution_section">
     <h3>Revolutionary editor</h3>
     <p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
     <div>
@@ -234,11 +236,14 @@
 </main>
 
 <footer>
-  <div>
+  <div class="header_logo fl_row">
     <object type="image/svg+xml" data="src/svg/logo.svg" width="111" height="64" name="">
       <img src="src/img/icon/logo.png" alt="">
     </object>
-    <p>Lorem ipsum dolor sit amet, feugiat delicat liberavisse id cum no quo.</p>
+    <h1>fork<span>io</span></h1>
+    <div>
+      <p>Lorem ipsum dolor sit amet, feugiat delicat liberavisse id cum no quo.</p>
+    </div>
   </div>
   <div>
     <h4>Navigation</h4>

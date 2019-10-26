@@ -1,8 +1,31 @@
 @import "../libs/reset.css";
+@font-face {
+  font-family: monte-grid;
+  src: url("../fonts/Montserrat-Regular.ttf") format("woof");
+}
+@font-face {
+  font-family: monte-flex;
+  src: url("../fonts/Montserrat-Bold.ttf") format("woof");
+  font-weight: 700;
+}
+@font-face {
+  font-family: source-flex;
+  src: url("../fonts/SourceSansPro-Regular.ttf") format("woof");
+}
+@font-face {
+  font-family: source-flex;
+  src: url("../fonts/SourceSansPro-BoldItalic.ttf") format("woof");
+  font-weight: 400;
+}
+@font-face {
+  font-family: lato-flex;
+  src: url("../fonts/SourceSansPro-BoldItalic.ttf") format("woof");
+  font-weight: 400;
+}
 body {
   width: 100%;
   background-color: #ffffff;
-  color: red;
+  font-family: monte-flex, sans-serif;
 }
 
 .app_btn {
@@ -10,6 +33,7 @@ body {
   color: #ffffff;
   border: none;
   border-radius: 100px;
+  padding: 10px;
 }
 .app_btn:hover {
   background-color: #70477e;
@@ -17,6 +41,16 @@ body {
 .app_btn:active {
   filter: alpha(Opacity=80%);
   opacity: 0.8;
+}
+
+.fr {
+  display: flex;
+  flex-direction: row;
+}
+
+.fc {
+  display: flex;
+  flex-direction: column;
 }
 
 .text_center {
@@ -47,15 +81,101 @@ body {
   font-weight: 400;
 }
 .main_header {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
   grid-area: auto;
   justify-self: center;
-  padding: 40px 10px;
+}
+
+.header_bar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  padding: 30px;
+}
+
+.header_logo {
+  flex-grow: 1;
+  align-items: center;
+}
+.header_logo object {
+  height: 2.5vw;
+}
+.header_logo h1 {
+  font-size: 2vw;
+  font-family: lato-grid, sans-serif;
+  text-transform: uppercase;
+  color: #333333;
+  margin-left: 1vw;
+}
+.header_logo h1 span {
+  color: #8d81ac;
+}
+
+.header_nav_block {
+  flex-grow: 2;
+  font-size: 1.5vw;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header_nav {
+  color: #635c73;
+  justify-content: space-between;
+  margin-right: 1.5vw;
+}
+.header_nav a {
+  margin-right: 1.5vw;
+}
+
+.buy_btn {
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  padding: 0.5vw 1.5vw;
+}
+
+.header_content {
+  margin: 10vh auto;
+}
+.header_content h2 {
+  color: #ffffff;
+  font-size: 6.5vw;
+  text-transform: capitalize;
+}
+.header_content p {
+  font-size: 2.2vw;
+  color: #8d81ac;
+  margin-top: 2vh;
+  font-family: lato-grid, sans-serif;
+}
+.header_content .header_sub_content {
+  font-size: 1.5vw;
+  color: #635c73;
+  font-family: monte-flex, sans-serif;
+  text-transform: uppercase;
+}
+
+.download_section {
+  position: absolute;
+  top: 95vh;
+  left: 0;
+  right: 0;
+}
+.download_section button {
+  font-size: 1.5vw;
+  padding: 1.5vw 2.5vw;
+}
+.download_section p {
+  text-transform: capitalize;
+  color: #635c73;
+  font-size: 1vw;
+  margin-top: 1.5vh;
+}
+
+.revolution_section {
+  margin-top: 2vh;
 }
 
 /*# sourceMappingURL=main.css.map */
