@@ -4,32 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <title>Title</title>
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
-
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </head>
 <body>
-<header>
+<header class="main_header" style="background-image:url(src/img/header.png);">
   <section>
-    <object type="image/svg+xml" data="src/svg/logo.svg" width="111" height="64" name="">
-      <img src="src/img/icon/logo.png" alt="">
-    </object>
-    <h1>fork<span>io</span></h1>
-    <button type="submit" id="buy" name="buyApp_btn">buy now</button>
-    <nav>
-      <a>Overview</a>
-      <a>About fork</a>
-      <a>Buying options</a>
-      <a>Support</a>
-    </nav>
+    <div>
+      <object type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
+        <img src="src/img/icon/logo.png" width="40" height="39" align="left" alt="Fork application logo">
+      </object>
+      <h1>fork<span>io</span></h1>
+    </div>
+    <div>
+      <nav>
+        <a>Overview</a>
+        <a>About fork</a>
+        <a>Buying options</a>
+        <a>Support</a>
+      </nav>
+      <button class="app_btn" type="submit" id="buy" name="buyApp_btn">buy now</button>
+    </div>
   </section>
   <section>
     <h2>fork app</h2>
     <p>A real gamechanger in the world of web-development</p>
     <p>v. 2.8 For Mac and Windows</p>
   </section>
-  <button type="button" id="trial" name="trial_btn">Download for free now</button>
+  <button class="app_btn" type="button" id="trial" name="trial_btn">Download for free now</button>
   <p>unlimited 30-days trial period</p>
 </header>
 <main>
@@ -186,7 +189,7 @@
   <section>
     <p>Subscribe To Our Newsletter</p>
     <label ><input type="email"></label>
-    <button type="submit"></button>
+    <button type="submit">Subscribe</button>
   </section>
 
   <section>

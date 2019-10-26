@@ -1,23 +1,61 @@
-@media (max-width: 575.98px) {
-
+@import "../libs/reset.css";
+body {
+  width: 100%;
+  background-color: #ffffff;
+  color: red;
 }
 
- /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) {
-
+.app_btn {
+  background-color: #8d81ac;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+}
+.app_btn:hover {
+  background-color: #70477e;
+}
+.app_btn:active {
+  filter: alpha(Opacity=80%);
+  opacity: 0.8;
 }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-
+.text_center {
+  text-align: center;
 }
 
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
+@font-face {
+  font-family: monte-grid;
+  src: url("../fonts/Montserrat-Regular.ttf") format("woof");
+}
+@font-face {
+  font-family: monte-flex;
+  src: url("../fonts/Montserrat-Bold.ttf") format("woof");
+  font-weight: 700;
+}
+@font-face {
+  font-family: source-flex;
+  src: url("../fonts/SourceSansPro-Regular.ttf") format("woof");
+}
+@font-face {
+  font-family: source-flex;
+  src: url("../fonts/SourceSansPro-BoldItalic.ttf") format("woof");
+  font-weight: 400;
+}
+@font-face {
+  font-family: lato-flex;
+  src: url("../fonts/SourceSansPro-BoldItalic.ttf") format("woof");
+  font-weight: 400;
+}
+.main_header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  grid-area: auto;
+  justify-self: center;
+  padding: 40px 10px;
 }
 
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
-}
+/*# sourceMappingURL=main.css.map */
