@@ -9,16 +9,16 @@
 
 </head>
 <body class="wrapper">
-<header class="fl_c main_header" style="background-image:url(src/img/header.png);">
-  <section class="fl_r header_bar">
-    <div class="fl_r header_logo">
+<header class="flx_col main_header" style="background-image:url(src/img/header.png);">
+  <section class="flx_row header_bar">
+    <div class="flx_row header_logo">
       <object type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
         <img src="src/img/icon/logo.png" width="40" height="39" align="left" alt="Fork application logo">
       </object>
       <h1>fork<span>io</span></h1>
     </div>
-    <div class="fl_r header_nav_block">
-      <nav class="fl_r header_nav">
+    <div class="flx_row header_nav_block">
+      <nav class="flx_row header_nav">
         <a>Overview</a>
         <a>About fork</a>
         <a>Buying options</a>
@@ -49,8 +49,8 @@
   </section>
 
   <section class="you_get_section">
-    <div class="fl_r you_get_block">
-      <div class="fl_c ">
+    <div class="flx_row you_get_block">
+      <div class="flx_col ">
         <h3>&lt;Here is what you get&gt;</h3>
         <div class="editor code">
           <object type="image/svg+xml" data="src/svg/ellipses.svg" width="64" height="12" name="">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <section class="you_get_content">
-        <div class="fl_r">
+        <div class="flx_row">
           <object type="image/svg+xml" data="src/svg/web_better.svg" width="111" height="64" name="">
             <img src="src/img/icon/web_better.png"  width="111" height="64" alt="">
           </object>
@@ -72,7 +72,7 @@
             <p>Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
           </div>
         </div>
-        <div class="fl_r">
+        <div class="flx_row">
           <object type="image/svg+xml" data="src/svg/power_tool.svg" width="90" height="80" name="">
             <img src="src/img/icon/power_tool.png" width="90" height="80" alt="">
           </object>
@@ -81,7 +81,7 @@
             <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.</p>
           </div>
         </div>
-        <div class="fl_r">
+        <div class="flx_row">
           <object type="image/svg+xml" data="src/svg/experimental.svg" width="60" height="84" name="">
             <img src="src/img/icon/experimental.png" width="60" height="84" alt="">
           </object>
@@ -90,7 +90,7 @@
             <p>Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat. </p>
           </div>
         </div>
-        <div class="fl_r">
+        <div class="flx_row">
           <object type="image/svg+xml" data="src/svg/created_web.svg" width="111" height="64" name="">
             <img src="src/img/icon/created_web.png" alt="">
           </object>
@@ -104,30 +104,34 @@
   </section>
 
   <section class="comment_section">
-    <div class="fl_r marvel">
+    <div class="flx_row marvel">
       <img src="src/img/icon/user_pic.png" alt="Marvell for ever">
       <p><strong>Steven Strange</strong> <span>@DoctorS</span></p>
     </div>
-    <div class="fl_r comments">
+    <div class="flx_row comments">
       <span class="arrow">&lt;</span>
       <p><span>@Pixelbuddha</span> Suspendisse sodales sem est, in scelerisque felis scelerisque in. Aenean faucibus mollis risus. Praesent sit amet erat eget eros.</p>
       <span class="arrow">&gt;</span>
     </div>
     <p class="text_center"><span>2 hours ago</span></p>
 
-    <div class="social_btn fl_r ">
-      <div class="social_gh"><img src="src/img/icon/gh.png">GitHub</div>
-      <div class="social_tw"><img src="src/img/icon/tw.png">Twitter</div>
-      <div class="social_fb"><img src="src/img/icon/fb.png">Facebook</div>
-    </div>
-    <div class="social_desr fl_r">
-      <p>7 352 Followers</p>
-      <p>136 312 Followers</p>
-      <p>218 092 Subscribers</p>
+    <div class="flx_row social_btn">
+      <a>
+        <p class="social_gh">GitHub</p>
+        <p class="social_descr">7 352 Followers</p>
+      </a>
+      <a>
+        <p class="social_tw">Twitter</p>
+        <p class="social_descr">136 312 Followers</p>
+      </a>
+      <a>
+        <p class="social_fb">Facebook</p>
+        <p class="social_descr">218 092 Subscribers</p>
+      </a>
     </div>
   </section>
 
-  <section>
+  <section class="flx_col talking_section">
     <h3>People Are Talking About Fork</h3>
     <section>
       <div>
@@ -158,6 +162,7 @@
       </div>
     </section>
   </section>
+
   <section>
     <h3>Fork Subscription Pricing</h3>
     <section>
@@ -241,7 +246,7 @@
 </main>
 
 <footer>
-  <div class="header_logo fl_row">
+  <div class="header_logo flx_row">
     <object type="image/svg+xml" data="src/svg/logo.svg" width="111" height="64" name="">
       <img src="src/img/icon/logo.png" alt="">
     </object>

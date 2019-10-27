@@ -44,12 +44,12 @@ html, body {
   opacity: 0.8;
 }
 
-.fl_r {
+.flx_row {
   display: flex;
   flex-direction: row;
 }
 
-.fl_c {
+.flx_col {
   display: flex;
   flex-direction: column;
 }
@@ -229,7 +229,8 @@ html, body {
   max-width: 57rem;
   margin-top: 2.5rem;
   border-radius: 0.5rem;
-  background-color: #333333;
+  box-shadow: 0 0 25px rgba(0, 5, 5, 0.3);
+  background: #333333 url("../src/img/code.png") no-repeat left 8rem top 2rem;
 }
 .editor object {
   margin: 1.2rem 0 0 1.5rem;
@@ -315,24 +316,51 @@ html, body {
 .social_btn {
   justify-content: space-between;
   align-items: center;
-  max-width: 40rem;
-  margin: 4rem auto;
+  align-content: center;
+  margin: 4rem auto 0;
 }
-.social_btn div {
-  display: flex;
-  align-items: center;
-  text-align: center;
+.social_btn a {
   width: 100%;
   max-width: 12rem;
-  height: 100%;
-  max-height: 2.5rem;
-  border-radius: 0.25rem;
-  margin-bottom: 0.9rem;
-  background-color: #635c73;
 }
-.social_btn img {
-  margin: 0.8rem 1.25rem;
-  float: left;
+.social_btn p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.25rem;
+}
+
+.social_gh {
+  display: flex;
+  background: #f4f4f4 url(../src/img/icon/gh.png) no-repeat left 1.2rem center;
+}
+.social_gh:hover {
+  background-color: #e4e4e4;
+}
+
+.social_tw {
+  color: #ffffff;
+  display: flex;
+  background: #26a6d1 url(../src/img/icon/tw.png) no-repeat left 1.2rem center;
+}
+.social_tw:hover {
+  background-color: #2190b5;
+}
+
+.social_fb {
+  color: #ffffff;
+  display: flex;
+  background: #3b5998 url(../src/img/icon/fb.png) no-repeat left 1.2rem center;
+}
+.social_fb:hover {
+  background-color: #30487b;
+}
+
+.social_descr {
+  font-size: 0.7rem;
+  color: #848e97;
 }
 
 /*# sourceMappingURL=main.css.map */
