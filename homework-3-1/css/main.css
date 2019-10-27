@@ -363,4 +363,149 @@ html, body {
   color: #848e97;
 }
 
+.talking_section {
+  margin-top: 4rem;
+  background: #4b3b4e url("../src/img/Layer1.png") no-repeat center center;
+  padding-bottom: 2rem;
+}
+.talking_section h3 {
+  margin: 4.5rem auto;
+  font-size: 2.4rem;
+  color: #f4f4f4;
+  text-transform: capitalize;
+}
+
+.talking_block {
+  padding: 0 7rem;
+  font-family: source-flex, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #f4f4f4;
+  justify-content: space-between;
+  align-items: center;
+}
+.talking_block img {
+  max-height: 3.2rem;
+  margin-bottom: 1.5rem;
+}
+.talking_block p {
+  width: 100%;
+  max-width: 15rem;
+  font-size: 0.8rem;
+  margin-bottom: 5rem;
+}
+
+.subscribe_section {
+  background: #4b3b4e url("../src/img/Layer2.png") no-repeat center center;
+  padding-bottom: 2rem;
+}
+.subscribe_section h3 {
+  margin: 0 auto;
+  font-size: 2.4rem;
+  color: #f4f4f4;
+  text-transform: capitalize;
+  border-top: 1px solid rgba(199, 199, 199, 0.2);
+  padding: 4.5rem 3.5rem 0;
+}
+.subscribe_section .subscribe_section_txt {
+  width: 70%;
+  margin: 0 auto;
+  font-family: source-flex, sans-serif;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+  color: #a291a5;
+}
+
+.subscribe_block {
+  color: #f4f4f4;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 3.5rem auto 4rem;
+}
+.subscribe_block h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.subscribe_passive {
+  margin: 0.6rem;
+  width: 80%;
+  max-width: 15rem;
+  height: 23rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.5s linear;
+}
+.subscribe_passive h4 {
+  transition: 0.5s linear;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.subscribe_passive .price {
+  transition: 0.5s linear;
+  font-size: 3rem;
+  margin: 1.8rem auto;
+}
+.subscribe_passive span {
+  transition: 0.5s linear;
+  font-size: 0.7rem;
+  opacity: 0.3;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.25rem solid #8d81ac;
+}
+.subscribe_passive .package_name {
+  transition: 0.5s linear;
+  height: 100%;
+  max-height: 3rem;
+  line-height: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+}
+.subscribe_passive button {
+  transition: 0.5s linear;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 0.7rem 1.6rem;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.subscribe_passive:hover {
+  margin: 0.6rem;
+  width: 100%;
+  max-width: 15rem;
+  height: 28rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.subscribe_passive:hover h4 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.subscribe_passive:hover .price {
+  font-size: 4rem;
+}
+.subscribe_passive:hover .package_name {
+  font-size: 1rem;
+  line-height: 2rem;
+  max-height: 4rem;
+  margin-bottom: 2rem;
+}
+.subscribe_passive:hover button {
+  font-size: 0.8rem;
+  padding: 0.9rem 1.8rem;
+}
+.subscribe_passive:hover button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe_form {
+  background-color: #f4f4f4;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=main.css.map */
