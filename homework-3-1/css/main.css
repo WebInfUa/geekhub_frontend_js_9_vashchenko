@@ -108,6 +108,7 @@ html, body {
 }
 .header_logo object {
   height: 2rem;
+  max-width: 2rem;
 }
 .header_logo h1 {
   font-size: 1.25rem;
@@ -505,7 +506,131 @@ html, body {
 
 .subscribe_form {
   background-color: #f4f4f4;
+  justify-content: space-between;
+  padding: 2.75rem 7rem;
+}
+.subscribe_form p {
+  color: #635c73;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.subscribe_form div {
+  width: 30rem;
+  text-align: right;
+}
+.subscribe_form input {
+  width: 100%;
+  max-width: 15rem;
+  height: 100%;
+  max-height: 2rem;
+  border: none;
+  border-radius: 5rem;
+  padding-left: 1rem;
+  margin-right: 0.5rem;
+}
+.subscribe_form .app_btn {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  padding: 0.6rem 1.5rem;
+  max-height: 2rem;
+}
+
+.blog_section {
+  margin: 3rem auto;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.blog_block {
+  width: 100%;
+  max-width: 17rem;
+  margin: 0 1rem;
+}
+.blog_block h4 {
+  font-size: 1.4rem;
+  color: #d3d1da;
+  margin-bottom: 2.5rem;
+}
+.blog_block h5 {
+  font-size: 0.8rem;
+  color: #414141;
+  line-height: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.blog_block p {
+  color: #848e97;
+  font-size: 0.65rem;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+}
+.blog_block button {
+  margin-top: 2rem;
+  border: none;
+  color: #8d81ac;
+  padding: 0.6rem 1.2rem;
+}
+
+.footer_main {
+  border-top: 0.01rem solid rgba(0, 0, 0, 0.5);
+  width: 90%;
+  height: 100%;
+  max-height: 16.5rem;
   justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.footer_main div {
+  margin: 3rem 1rem;
+  max-width: 13rem;
+}
+.footer_main h4 {
+  color: #333333;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  line-height: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer_logo p {
+  font-size: 0.7rem;
+  margin-top: 1.75rem;
+  color: #848e97;
+}
+
+.footer_nav {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+.footer_nav a {
+  line-height: 1.3rem;
+  color: #635c73;
+}
+.footer_nav a:hover {
+  color: #333333;
+}
+
+.footer_address p, .footer_address address {
+  font-size: 0.6rem;
+  color: #635c73;
+  margin: 1rem auto;
+}
+.footer_address a {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #333333;
+}
+.footer_address a:hover {
+  color: #635c73;
+}
+
+.footer_info p {
+  text-align: justify;
+  color: #635c73;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
 }
 
 /*# sourceMappingURL=main.css.map */
