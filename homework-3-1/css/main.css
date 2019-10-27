@@ -89,10 +89,10 @@ html, body {
 .main_header {
   min-height: 100vh;
   background-size: cover;
-  background-position: center;
   position: relative;
   grid-area: auto;
   justify-self: center;
+  background: url(../src/img/header.png) center;
 }
 
 .header_bar {
@@ -216,8 +216,9 @@ html, body {
   margin: 0 auto;
 }
 .you_get_block h3 {
+  text-align: left;
   margin-top: 4.2rem;
-  margin-right: 7rem;
+  margin-right: 1rem;
   font-size: 2.4rem;
   color: #8d81ac;
   float: right;
@@ -325,7 +326,6 @@ html, body {
   max-width: 12rem;
 }
 .social_btn p {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,8 +371,11 @@ html, body {
 }
 .talking_section h3 {
   margin: 4.5rem auto;
+  padding: 0 2rem;
   font-size: 2.4rem;
   color: #f4f4f4;
+  line-height: 3rem;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -515,8 +518,7 @@ html, body {
   text-transform: capitalize;
 }
 .subscribe_form div {
-  width: 30rem;
-  text-align: right;
+  width: 50%;
 }
 .subscribe_form input {
   width: 100%;
@@ -631,6 +633,99 @@ html, body {
   font-size: 0.7rem;
   line-height: 1.2rem;
   letter-spacing: 0.015rem;
+}
+
+@media (max-width: 991.98px) {
+  html, body {
+    font-size: 14px;
+  }
+
+  .main_header {
+    background: url(../src/img/header_mobile.png) center;
+  }
+
+  .header_nav_block {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .header_nav_block .menu {
+    padding-right: 2rem;
+    width: 1rem;
+    height: 1rem;
+    background: url(../src/img/icon/sandwich.png) no-repeat;
+  }
+  .header_nav_block .menu a {
+    visibility: hidden;
+  }
+  .header_nav_block .menu a:hover {
+    background-color: #8d81ac;
+  }
+  .header_nav_block .menu:hover a {
+    visibility: visible;
+  }
+  .header_nav_block .buy_btn {
+    margin-right: 1rem;
+  }
+
+  .you_get_block {
+    flex-direction: column;
+    padding: 0 4rem;
+  }
+  .you_get_block h3 {
+    margin: 3rem auto 0;
+    text-align: center;
+  }
+  .you_get_block .editor {
+    display: none;
+  }
+
+  .social_btn {
+    flex-direction: column;
+  }
+
+  .talking_section {
+    background-size: cover;
+    background: #4b3b4e url("../src/img/Layer1_mobile.png") no-repeat;
+  }
+
+  .talking_block {
+    flex-direction: column;
+  }
+
+  .subscribe_block {
+    flex-direction: column;
+  }
+
+  .subscribe_form {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .subscribe_form p {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .subscribe_form div {
+    width: 90%;
+    text-align: center;
+  }
+
+  .blog_section {
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .blog_block {
+    max-width: 100%;
+  }
+
+  .footer_main {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer_main div {
+    max-width: 70%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
