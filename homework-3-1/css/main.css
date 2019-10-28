@@ -133,8 +133,19 @@ html, body {
   justify-content: space-between;
   margin-right: 1.5em;
 }
+.header_nav .slide_menu {
+  display: none;
+}
+.header_nav .slide_cl_btn {
+  display: none;
+}
 .header_nav a {
   margin-right: 1.5em;
+  color: #635c73;
+}
+.header_nav a:hover {
+  cursor: pointer;
+  color: #8d81ac;
 }
 
 .buy_btn {
@@ -155,6 +166,7 @@ html, body {
   font-size: 1.5rem;
   color: #8d81ac;
   margin-top: 1rem;
+  padding: 0 0.5rem;
   font-family: lato-grid, sans-serif;
 }
 .header_content .header_sub_content {
@@ -321,7 +333,7 @@ html, body {
   align-content: center;
   margin: 4rem auto 0;
 }
-.social_btn a {
+.social_btn div {
   width: 100%;
   max-width: 12rem;
 }
@@ -386,6 +398,7 @@ html, body {
   font-weight: bold;
   color: #f4f4f4;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 .talking_block img {
@@ -407,6 +420,7 @@ html, body {
   margin: 0 auto;
   font-size: 2.4rem;
   color: #f4f4f4;
+  text-align: center;
   text-transform: capitalize;
   border-top: 1px solid rgba(199, 199, 199, 0.2);
   padding: 4.5rem 3.5rem 0;
@@ -527,7 +541,7 @@ html, body {
   max-height: 2rem;
   border: none;
   border-radius: 5rem;
-  padding-left: 1rem;
+  padding: 0.5rem 1rem;
   margin-right: 0.5rem;
 }
 .subscribe_form .app_btn {
@@ -636,10 +650,6 @@ html, body {
 }
 
 @media (max-width: 991.98px) {
-  html, body {
-    font-size: 14px;
-  }
-
   .main_header {
     background: url(../src/img/header_mobile.png) center;
   }
@@ -647,54 +657,110 @@ html, body {
   .header_nav_block {
     flex-direction: row-reverse;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
   }
-  .header_nav_block .menu {
-    padding-right: 2rem;
-    width: 1rem;
-    height: 1rem;
-    background: url(../src/img/icon/sandwich.png) no-repeat;
+
+  .header_nav .slide_menu {
+    margin-left: 1.5rem;
+    display: inline;
+    font-size: 1.7rem;
+    cursor: pointer;
   }
-  .header_nav_block .menu a {
-    visibility: hidden;
+  .header_nav .slide_cl_btn {
+    position: relative;
+    top: 0;
+    font-size: 1.5rem;
   }
-  .header_nav_block .menu a:hover {
+  .header_nav .menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
     background-color: #8d81ac;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 3rem;
   }
-  .header_nav_block .menu:hover a {
-    visibility: visible;
+  .header_nav .menu a {
+    color: #ffffff;
+    padding: 0 1rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
   }
-  .header_nav_block .buy_btn {
+  .header_nav .menu a:hover {
+    color: #635c73;
+  }
+  .header_nav .buy_btn {
     margin-right: 1rem;
+  }
+
+  .revolution_section {
+    margin: 2.5rem auto 1rem;
+  }
+  .revolution_section p {
+    margin: 0.5rem auto;
+  }
+
+  .you_get_section {
+    margin-top: 1rem;
   }
 
   .you_get_block {
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 0 1rem;
   }
   .you_get_block h3 {
-    margin: 3rem auto 0;
+    margin: 1rem auto 0;
     text-align: center;
   }
   .you_get_block .editor {
     display: none;
   }
 
+  .you_get_content {
+    max-width: 98%;
+    margin: 1.5rem auto;
+  }
+  .you_get_content div {
+    margin-bottom: 1rem;
+  }
+
+  .marvel {
+    margin: 1rem auto;
+  }
+
+  .comments {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .social_btn {
     flex-direction: column;
+    margin-top: 1rem;
   }
 
   .talking_section {
     background-size: cover;
-    background: #4b3b4e url("../src/img/Layer1_mobile.png") no-repeat;
+    margin-top: 1rem;
+  }
+  .talking_section h3 {
+    margin: 2.5rem auto;
   }
 
   .talking_block {
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .talking_block p {
+    margin-bottom: 1.5rem;
   }
 
   .subscribe_block {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .subscribe_form {
@@ -706,25 +772,138 @@ html, body {
     margin-bottom: 3rem;
   }
   .subscribe_form div {
-    width: 90%;
+    width: 98%;
     text-align: center;
+    margin: 0 auto;
   }
 
   .blog_section {
+    margin-top: 1rem;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
   }
 
   .blog_block {
     max-width: 100%;
+    padding: 0 0.5rem;
+    margin: 0;
+  }
+  .blog_block h4 {
+    margin: 1rem 0;
   }
 
   .footer_main {
     flex-direction: column;
     justify-content: flex-start;
+    width: 90%;
+    margin: 0;
+    padding: 0 1rem;
+    max-height: 100%;
   }
   .footer_main div {
-    max-width: 70%;
+    max-width: 90%;
+    margin: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .talking_block {
+    padding: 0 2rem;
+  }
+  .talking_block p {
+    margin: 0 auto 1.5rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  html, body {
+    font-size: 18px;
+  }
+
+  .header_bar {
+    padding: 0.4rem;
+    flex-direction: column;
+  }
+
+  .header_nav_block {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .revolution_section h3 {
+    font-size: 90%;
+    margin-top: 2rem;
+  }
+
+  .subscribe_section h3 {
+    font-size: 90%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .you_get_block h3 {
+    margin: 0.5rem auto 0;
+    text-align: center;
+    font-size: 90%;
+  }
+
+  .you_get_content div {
+    margin-bottom: 0.7rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comments {
+    padding: 0.2rem;
+    margin: 0;
+    font-size: 70%;
+  }
+
+  .talking_section h3 {
+    margin: 0;
+    padding: 0.3rem;
+    font-size: 2rem;
+  }
+
+  .talking_block {
+    padding: 0.3rem;
+  }
+  .talking_block img {
+    max-width: 90%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .subscribe_form input {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .footer_main div {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 374px) {
+  html, body {
+    font-size: 80%;
+  }
+
+  .wrapper {
+    max-width: 95%;
+  }
+
+  .download_section button {
+    padding: 0.5rem;
+  }
+
+  .marvel {
+    flex-direction: column;
+  }
+
+  .footer_main {
+    padding: 0 0.2rem;
+    width: 80%;
   }
 }
 
