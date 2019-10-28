@@ -6,3 +6,5 @@
 **/scss
 *.map
 **.map
+*.css.map
+**.css.map
