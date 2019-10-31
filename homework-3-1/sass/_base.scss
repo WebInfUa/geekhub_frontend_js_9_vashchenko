@@ -17,7 +17,7 @@ html, body {
     background-color: #70477e;
   }
   &:active {
-    font-size: 2rem;
+    filter: alpha(Opacity=80%);
     opacity: 0.8;
   }
 }
