@@ -88,11 +88,11 @@ html, body {
 }
 .main_header {
   min-height: 100vh;
-  background-size: cover;
   position: relative;
   grid-area: auto;
   justify-self: center;
-  background: url(../src/img/header.png) center;
+  background-size: cover;
+  background: url(../src/img/header.png) no-repeat;
 }
 
 .header_bar {
@@ -895,6 +895,15 @@ html, body {
 
   .download_section button {
     padding: 0.5rem;
+  }
+
+  .subscribe_passive h4 {
+    font-size: 95%;
+  }
+
+  .subscribe_passive button {
+    padding: 0.4rem;
+    font-size: 90%;
   }
 
   .marvel {
