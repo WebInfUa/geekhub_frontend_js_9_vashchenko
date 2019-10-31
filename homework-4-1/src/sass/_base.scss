@@ -1,0 +1,43 @@
+@import "fonts";
+
+html, body {
+  width: 100%;
+  background-color: #ffffff;
+  font-family: monte-flex, sans-serif;
+  font-size: 20px;
+}
+
+.app_btn {
+  background-color: #8d81ac;
+  color: #ffffff;
+  border: none;
+  border-radius: 5em;
+  padding: 0.5em;
+  &:hover {
+    background-color: #70477e;
+  }
+  &:active {
+    filter: alpha(Opacity=80%);
+    opacity: 0.8;
+  }
+}
+
+
+.flx_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flx_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 69rem;
+  margin: 0 auto;
+}
