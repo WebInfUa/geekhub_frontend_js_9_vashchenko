@@ -1,0 +1,16 @@
+.header {
+  min-height: 40rem;
+  background: url(../src/img/header.png) no-repeat center center;
+  @include flex(column, space-between, center);
+}
+
+.header-nav-section {
+  @include flex(row, space-around, center);
+  @include padd($gutter 0);
+  background-color: $white;
+  width: 100%;
+}
+
+.app-logo {
+
+}

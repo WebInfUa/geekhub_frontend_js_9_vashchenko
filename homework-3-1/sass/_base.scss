@@ -7,19 +7,10 @@ html, body {
   font-size: 20px;
 }
 
-.app_btn {
-  background-color: #8d81ac;
-  color: #ffffff;
-  border: none;
-  border-radius: 5em;
-  padding: 0.5em;
-  &:hover {
-    background-color: #70477e;
-  }
-  &:active {
-    filter: alpha(Opacity=80%);
-    opacity: 0.8;
-  }
+.wrapper {
+  width: 100%;
+  max-width: 58rem;
+  margin: 0 auto;
 }
 
 
@@ -31,13 +22,4 @@ html, body {
 .flx_col {
   display: flex;
   flex-direction: column;
-}
-
-.text_center {
-  text-align: center;
-}
-
-.wrapper {
-  max-width: 69rem;
-  margin: 0 auto;
 }

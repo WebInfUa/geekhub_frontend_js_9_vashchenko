@@ -1,0 +1,15 @@
+.app_btn {
+  background-color: $accent;
+  color: $white;
+  border: none;
+  border-radius: 5em;
+  padding: .5em;
+  &:hover {
+    background-color: $dim_accent;
+  }
+  &:active {
+    font-size: 2rem;
+    opacity: .8;
+  }
+}
+
