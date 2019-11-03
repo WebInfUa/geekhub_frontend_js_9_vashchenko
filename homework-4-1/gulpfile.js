@@ -5,7 +5,7 @@ const gulpSource = require('gulp-sourcemaps');
 gulp.task('sass-watch', function () {
   return gulp.src('./src/sass/**/*.scss')
     .pipe(gulpSource.init()) //Показывает строку scss в консоли
-    .pipe(gulpSass({outputStyle: 'extended'}).on('Error', gulpSass.logError))
+    .pipe(gulpSass({outputStyle: 'compressed'}).on('Error', gulpSass.logError))
     /**
      * nested - вложенный, по умолчанию;
      * expanded - развернутый;

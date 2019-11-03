@@ -6,63 +6,56 @@
   max-height: 16.5rem;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-.footer__block {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  margin: 3rem 1rem;
-  max-width: 13rem;
-}
-
-.footer__headers {
-  color: $dark;
-  font-size: .8rem;
-  text-transform: capitalize;
-  line-height: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 3rem 1rem;
+    max-width: 13rem;
+  }
+  &__headers {
+    color: $dark;
+    font-size: .8rem;
+    text-transform: capitalize;
+    line-height: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__nav {
+    font-size: .7rem;
+    line-height: 1.3rem;
+    color: $dim;
+    &:hover {
+      color: $dark;
+    }
+  }
+  &__address {
+    font-size: .6rem;
+    color: $dim;
+    margin: 1rem 0;
+    &--tel {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: $dark;
+      &:hover {
+        color: $dim;
+      }
+    }
+  }
+  &__info {
+    text-align: justify;
+    color: $dim;
+    font-size: .7rem;
+    line-height: 1.2rem;
+    letter-spacing: .015rem;
+  }
 }
 
 .footer-logo {
   @include flex (row, flex-start, center);
-}
-
-.footer-logo__par {
-  font-size: .7rem;
-  margin-top: 1.75rem;
-  color: $amethyst;
-}
-
-.footer__nav {
-  font-size: .7rem;
-  line-height: 1.3rem;
-  color: $dim;
-  &:hover {
-    color: $dark;
+  &__par {
+    font-size: .7rem;
+    margin-top: 1.75rem;
+    color: $amethyst;
   }
-}
-
-.footer__address {
-  font-size: .6rem;
-  color: $dim;
-  margin: 1rem 0;
-}
-
-.footer__address--tel {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: $dark;
-  &:hover {
-    color: $dim;
-  }
-}
-
-.footer__info {
-  text-align: justify;
-  color: $dim;
-  font-size: .7rem;
-  line-height: 1.2rem;
-  letter-spacing: .015rem;
 }
