@@ -1,0 +1,45 @@
+.app-logo__svg {
+  height: 2rem;
+  max-width: 2rem;
+}
+
+.app-logo__img {
+  width: 100%;
+  max-width: 2rem;
+  height: 100%;
+  max-height: 2rem;
+}
+
+.you-get__editor--svg {
+  margin: 1.2rem 0 0 1.5rem;
+}
+
+.you-get__editor--img {
+  width: 100%;
+  max-width: 64px;
+  height: 100%;
+  max-height: 12px;
+}
+
+.you-get-content__svg {
+  width: 100%;
+  max-width: 6.75rem;
+  margin: 0 $gutter;
+}
+
+.you-get-content__img {
+  height: auto;
+  max-height: 4rem;
+}
+
+.marvel__img {
+  max-width: 4.25rem;
+  max-height: 4.25rem;
+  border-radius: 50%;
+}
+
+.talking-block__img {
+  max-height: 3.2rem;
+  margin-bottom: 1.5rem;
+}
+

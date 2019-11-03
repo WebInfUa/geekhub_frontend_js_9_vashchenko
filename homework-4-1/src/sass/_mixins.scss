@@ -1,15 +1,6 @@
-@mixin flex ($dir:row, $jc, $ai) {
+@mixin flex ($fd: row, $jc:unset, $ai:unset) {
   display: flex;
-  flex-direction: $dir;
+  flex-direction: $fd;
   justify-content: $jc;
   align-items: $ai;
 }
-
-@mixin marg ($marg...) {
-  margin: $marg;
-}
-
-@mixin padd ($padd...) {
-  padding: $padd;
-}
-

@@ -1,16 +1,97 @@
 .header {
-  min-height: 40rem;
+  min-height: 42.5rem;
+  background-size: cover;
   background: url(../src/img/header.png) no-repeat center center;
-  @include flex(column, space-between, center);
+  @include flex(column, space-between);
 }
 
-.header-nav-section {
-  @include flex(row, space-around, center);
-  @include padd($gutter 0);
-  background-color: $white;
-  width: 100%;
+.header-nav {
+  @include flex($fd: row, $ai: center);
+  background-color: $bg_color;
+  padding: $gutter;
 }
 
 .app-logo {
+  @include flex(row, flex-start, center);
+}
 
+.app-logo__headers {
+  font-size: 1.25rem;
+  font-family: lato-grid, sans-serif;
+  text-transform: uppercase;
+  color: $dark;
+  margin: 0 .8rem;
+}
+
+.app-logo__headers--accent {
+  color: $accent;
+}
+
+.menu {
+  @include flex(row, flex-end, center);
+  flex-grow: 1;
+  font-size: .8rem;
+}
+
+.menu__nav {
+  color: $dim;
+  margin-right: $gutter;
+}
+
+.menu__nav--link {
+  margin-right: $gutter;
+  color: $dim;
+  &:hover {
+    cursor: pointer;
+    color: $accent;
+  }
+}
+
+#menu__slide-js {
+  width: 100%;
+}
+
+.menu__slide--burger, .menu__slide--cl_btn {
+  visibility: hidden;
+  display: none;
+}
+
+.header-content {
+  text-align: center;
+  margin-top: -13rem;
+}
+
+.header-content__headers {
+  color: $white;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.header-content__par {
+  font-size: 1.5rem;
+  color: $accent;
+  margin: 1rem;
+  padding: 0 .5rem;
+  font-family: lato-grid, sans-serif;
+}
+
+.header-content__sub {
+  font-size: .8rem;
+  color: $dim;
+  font-family: monte-flex, sans-serif;
+  text-transform: uppercase;
+}
+
+.download-section {
+  text-align: center;
+  flex: 0 0 auto;
+  position: relative;
+  bottom: -2rem;
+}
+
+.download-section__par {
+  text-transform: capitalize;
+  color: $dim;
+  font-size: .7rem;
+  margin-top: 1rem;
 }

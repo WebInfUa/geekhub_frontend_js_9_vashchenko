@@ -1,15 +1,63 @@
-.app_btn {
+.button__accent {
   background-color: $accent;
   color: $white;
   border: none;
   border-radius: 5em;
-  padding: .5em;
   &:hover {
     background-color: $dim_accent;
   }
   &:active {
-    font-size: 2rem;
     opacity: .8;
   }
 }
+
+.menu__button_buy {
+  font-size: .8rem;
+  text-transform: capitalize;
+  padding: .5rem 2rem;
+}
+
+.download-section__button {
+  font-size: 1rem;
+  padding: 1rem 3rem;
+}
+
+.git-button {
+  max-width: 18.2rem;
+  max-height: 1.3rem;
+  margin: 0 auto;
+}
+
+.social-block__button {
+  width: 100%;
+  max-width: 12rem;
+}
+
+.subscribe-cards__buttons {
+  transition: .5s linear;
+  border: none;
+  border-radius: 5rem;
+  padding: .7rem 1.6rem;
+  text-transform: uppercase;
+  color: $bg_color;
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.form__button {
+  text-transform: uppercase;
+  font-size: .65rem;
+  padding: .8rem 1.5rem;
+  max-height: 2.3rem;
+}
+
+.blog-block__button {
+  margin-top: 2rem;
+  border: none;
+  color: $accent;
+  padding: .6rem 1.2rem;
+}
+
+
+
+
 
