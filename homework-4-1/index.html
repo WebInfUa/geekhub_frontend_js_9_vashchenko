@@ -17,7 +17,7 @@
     <a href="#" title="Index page ForkIO">
       <div class="app-logo">
         <object class="app-logo__svg" type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
-          <img class="app-logo__img" src="src/img/icon/logo.png" width="40" height="39" align="left"
+          <img class="app-logo__img" src="src/img/icon/logo.png" align="left"
                alt="Fork application logo">
         </object>
         <h1 class="app-logo__headers">fork<span class="app-logo__headers--accent">io</span></h1>
@@ -25,9 +25,9 @@
     </a>
     <div class="menu">
       <nav class="menu__nav">
-        <span class="menu__slide--burger" onclick="openNav()">&#9777;</span>
+        <span class="menu__slide--burger" onclick="isOpenNav()">&#9777;</span>
         <div id="menu__slide-js">
-          <a class="menu__slide--cl_btn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+          <a class="menu__slide--cl_btn" href="javascript:void(0)" onclick="isCloseNav()">&times;</a>
           <a class="menu__nav--link" href="#over" aria-label="Overview">Overview</a>
           <a class="menu__nav--link" href="#about" aria-label="Link about Fork Io section">About fork</a>
           <a class="menu__nav--link" href="#buying" aria-label="link on Byu">Buying options</a>
@@ -83,8 +83,7 @@
       </div>
       <section class="you-get-content">
         <div class="flx_row">
-          <object class="you-get-content__svg" type="image/svg+xml" data="src/svg/web_better.svg" width="111"
-                  height="64" name="">
+          <object class="you-get-content__svg" type="image/svg+xml" data="src/svg/web_better.svg" width="111" height="64" name="">
             <img src="src/img/icon/web_better.png" alt="">
           </object>
           <div>
@@ -331,15 +330,15 @@
 </footer>
 
 <script>
-  function openNav() {
-      document.getElementById("menu__slide-js").style.width = "10rem";
+  function isOpenNav() {
+      document.getElementById("menu__slide-js").style.display = "block";
   }
 
-  function closeNav() {
-    document.getElementById("menu__slide-js").style.width = null;
+  function isCloseNav() {
+    document.getElementById("menu__slide-js").style.display = null;
   }
 
-  window.matchMedia("(min-width: 992px)").addListener(closeNav);
+  window.matchMedia("(min-width: 992px)").addListener(isCloseNav);
 </script>
 </body>
 </html>

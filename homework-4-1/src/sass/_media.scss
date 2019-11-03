@@ -35,15 +35,15 @@
   }
 
   #menu__slide-js {
+    display: none;
     height: 100%;
-    width: 0;
+    width: 10rem;
     position: fixed;
     z-index: 10;
     top: 0;
     right: 0;
     background-color: $accent;
     overflow-x: hidden;
-    transition: 0.5s;
     padding-top: 2.5rem;
   }
 
