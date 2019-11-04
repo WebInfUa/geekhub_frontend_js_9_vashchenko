@@ -1,0 +1,30 @@
+.blog {
+  &-section {
+    @include flex(row, space-between, baseline);
+    margin: 3rem auto;
+    width: 90%;
+  }
+  &-block {
+    width: 100%;
+    max-width: 17rem;
+    margin: 0 1rem;
+    &__main-headers {
+      font-size: 1.4rem;
+      color: $amethyst;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    &__sub-headers {
+      font-size: .8rem;
+      color: $dark;
+      line-height: 1.5rem;
+      margin-bottom: .8rem;
+    }
+    &__par {
+      color: $amethyst;;
+      font-size: .65rem;
+      line-height: 1rem;
+      margin-bottom: .5rem;
+    }
+  }
+}

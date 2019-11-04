@@ -1,89 +1,91 @@
 .header {
   min-height: 42.5rem;
-  background-size: cover;
-  background: url(../src/img/header.png) no-repeat center center;
+  background: url(../src/img/header.png) center 100%;
   @include flex(column, space-between);
-}
 
-.header-nav {
-  @include flex($fd: row, $ai: center);
-  background-color: $bg_color;
-  padding: $gutter;
-}
+  &-nav {
+    @include flex($fd: row, $ai: center);
+    background-color: $bg_color;
+    padding: $gutter;
+  }
 
-.app-logo {
-  @include flex(row, flex-start, center);
-  &__headers {
-    font-size: 1.25rem;
-    font-family: lato-grid, sans-serif;
-    text-transform: uppercase;
-    color: $dark;
-    margin: 0 .8rem;
-    &--accent {
+  &-content {
+    text-align: center;
+    margin-top: -13rem;
+    &__headers {
+      color: $white;
+      font-size: 4rem;
+      text-transform: capitalize;
+    }
+    &__par {
+      font-size: 1.5rem;
       color: $accent;
+      margin: 0.8rem;
+      padding: 0 .5rem;
+      font-family: $lato-flex;
+    }
+    &__sub {
+      font-size: .8rem;
+      color: $dim;
+      font-family: $monte-flex;
+      text-transform: uppercase;
     }
   }
-}
 
-.menu {
-  @include flex(row, flex-end, center);
-  flex-grow: 1;
-  font-size: .8rem;
-  &__nav {
-    color: $dim;
-    margin-right: $gutter;
-    &--link {
-      margin-right: $gutter;
-      color: $dim;
-      &:hover {
-        cursor: pointer;
+  &-logo {
+    @include flex(row, flex-start, center);
+    &__headers {
+      font-size: 1.25rem;
+      font-family: $lato-flex;
+      text-transform: uppercase;
+      color: $dark;
+      margin: 0 .8rem;
+      &--accent {
         color: $accent;
       }
     }
   }
-}
 
-#menu__slide-js {
-  width: 100%;
-}
-
-.menu__slide--burger, .menu__slide--cl_btn {
-  visibility: hidden;
-  display: none;
-}
-
-.header-content {
-  text-align: center;
-  margin-top: -13rem;
-  &__headers {
-    color: $white;
-    font-size: 4rem;
-    text-transform: capitalize;
-  }
-  &__par {
-    font-size: 1.5rem;
-    color: $accent;
-    margin: 1rem;
-    padding: 0 .5rem;
-    font-family: lato-grid, sans-serif;
-  }
-  &__sub {
+  &-menu {
+    @include flex(row, flex-end, center);
+    flex-grow: 1;
     font-size: .8rem;
-    color: $dim;
-    font-family: monte-flex, sans-serif;
-    text-transform: uppercase;
+    &__nav {
+      color: $dim;
+      margin-right: $gutter;
+      &--link {
+        margin-right: $gutter;
+        color: $dim;
+        &:hover {
+          cursor: pointer;
+          color: $accent;
+        }
+      }
+    }
+    &__slide--burger  {
+      visibility: hidden;
+      display: none;
+    }
+    &__slide--cl_btn {
+      visibility: hidden;
+      display: none;
+    }
+  }
+
+  &-download {
+    text-align: center;
+    flex: 0 0 auto;
+    position: relative;
+    bottom: -3rem;
+    &__par {
+      text-transform: capitalize;
+      color: $dim;
+      font-size: .7rem;
+      margin-top: 1rem;
+    }
   }
 }
 
-.download-section {
-  text-align: center;
-  flex: 0 0 auto;
-  position: relative;
-  bottom: -2rem;
-  &__par {
-    text-transform: capitalize;
-    color: $dim;
-    font-size: .7rem;
-    margin-top: 1rem;
-  }
+#header-menu__slide-js {
+  width: 100%;
 }

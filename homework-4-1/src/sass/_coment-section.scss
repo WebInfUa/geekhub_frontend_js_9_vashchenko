@@ -1,0 +1,74 @@
+.comment {
+  line-height: 1.5rem;
+  margin-bottom: 1.25rem;
+  &-section {
+    text-align: center;
+    margin: 0 auto;
+    font-family: $source-flex;
+    font-size: 1rem;
+    max-width: 48rem;
+  }
+  &--arrow {
+    max-width: 1rem;
+    font-size: 1rem;
+    margin: 0 2rem;
+    color: $dark;
+    font-weight: bold;
+    opacity: .8;
+  }
+  &--accent {
+    font-size: .8rem;
+    color: $accent;
+  }
+}
+
+.marvel {
+  @include flex(row, center, center);
+  margin: 4.5rem auto 2.5rem;
+  max-width: 15rem;
+  text-align: left;
+  &__par {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.51rem;
+    color: $dark;
+  }
+}
+
+.social-block {
+  @include flex(row, space-between, center);
+  align-content: center;
+  margin: 4rem auto 0;
+  &__par {
+    @include flex(row, center, center);
+    padding: .75rem 1.2rem;
+    border-radius: .25rem;
+  }
+  &__par--gh {
+    display: flex;
+    background: $bg_color url(../src/img/icon/gh.png) no-repeat left 1.2rem center;
+    &:hover {
+      background-color: $white;
+    }
+  }
+  &__par--tw {
+    color: $white;
+    display: flex;
+    background: $blue url(../src/img/icon/tw.png) no-repeat left 1.2rem center;
+    &:hover {
+      background-color: $dim_blue;
+    }
+  }
+  &__par--fb {
+    color: $white;
+    display: flex;
+    background: $fb_blue url(../src/img/icon/fb.png) no-repeat left 1.2rem center;
+    &:hover {
+      background-color: $dim_fb_blue;
+    }
+  }
+  &__par--descr {
+    font-size: .7rem;
+    color: $dim;
+  }
+}

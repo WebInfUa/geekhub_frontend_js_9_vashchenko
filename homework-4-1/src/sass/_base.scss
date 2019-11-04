@@ -1,16 +1,15 @@
 html, body {
   width: 100%;
-  background-color: #ffffff;
-  font-family: monte-flex, sans-serif;
+  background-color: $white;
+  font-family: $monte-flex;
   font-size: 20px;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 58rem;
+  max-width: 68rem;
   margin: 0 auto;
 }
-
 
 .flx_row {
   display: flex;

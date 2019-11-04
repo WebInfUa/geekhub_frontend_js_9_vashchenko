@@ -3,21 +3,23 @@
   color: $white;
   border: none;
   border-radius: 5em;
+
   &:hover {
     background-color: $dim_accent;
   }
+
   &:active {
     opacity: .8;
   }
 }
 
-.menu__button_buy {
+.header-menu__button_buy {
   font-size: .8rem;
   text-transform: capitalize;
   padding: .5rem 2rem;
 }
 
-.download-section__button {
+.header-download__button {
   font-size: 1rem;
   padding: 1rem 3rem;
 }
@@ -51,13 +53,18 @@
 }
 
 .blog-block__button {
-  margin-top: 2rem;
+  display: table-cell;
+  position: relative;
+  top: 2.2rem;
+  font-size: 0.7rem;
   border: none;
+  background-color: $dim_bg_color;
   color: $accent;
   padding: .6rem 1.2rem;
+
   &:hover {
-    background-color: $dim_accent;
-    color: $dim;
+    background-color: $dim;
+    color: $white;
   }
 }
 
