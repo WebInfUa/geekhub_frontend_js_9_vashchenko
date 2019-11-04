@@ -3,6 +3,7 @@
   color: $white;
   border: none;
   border-radius: 5em;
+  cursor: pointer;
 
   &:hover {
     background-color: $dim_accent;
@@ -17,22 +18,26 @@
   font-size: .8rem;
   text-transform: capitalize;
   padding: .5rem 2rem;
+  cursor: pointer;
 }
 
 .header-download__button {
   font-size: 1rem;
   padding: 1rem 3rem;
+  cursor: pointer;
 }
 
 .git-button {
   max-width: 18.2rem;
   max-height: 1.3rem;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .social-block__button {
   width: 100%;
   max-width: 12rem;
+  cursor: pointer;
 }
 
 .subscribe-cards__buttons {
@@ -43,6 +48,7 @@
   text-transform: uppercase;
   color: $bg_color;
   background-color: rgba(255, 255, 255, .15);
+  cursor: pointer;
 }
 
 .form__button {
@@ -50,6 +56,11 @@
   font-size: .65rem;
   padding: .8rem 1.5rem;
   max-height: 2.3rem;
+  cursor: pointer;
+
+  :hover {
+    opacity: .8;
+  }
 }
 
 .blog-block__button {
@@ -61,6 +72,7 @@
   background-color: $dim_bg_color;
   color: $accent;
   padding: .6rem 1.2rem;
+  cursor: pointer;
 
   &:hover {
     background-color: $dim;

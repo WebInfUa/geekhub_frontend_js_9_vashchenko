@@ -12,11 +12,13 @@
   &-content {
     text-align: center;
     margin-top: -13rem;
+
     &__headers {
       color: $white;
       font-size: 4rem;
       text-transform: capitalize;
     }
+
     &__par {
       font-size: 1.5rem;
       color: $accent;
@@ -24,6 +26,7 @@
       padding: 0 .5rem;
       font-family: $lato-flex;
     }
+
     &__sub {
       font-size: .8rem;
       color: $dim;
@@ -34,12 +37,14 @@
 
   &-logo {
     @include flex(row, flex-start, center);
+
     &__headers {
       font-size: 1.25rem;
       font-family: $lato-flex;
       text-transform: uppercase;
       color: $dark;
       margin: 0 .8rem;
+
       &--accent {
         color: $accent;
       }
@@ -50,22 +55,27 @@
     @include flex(row, flex-end, center);
     flex-grow: 1;
     font-size: .8rem;
+
     &__nav {
       color: $dim;
       margin-right: $gutter;
+
       &--link {
         margin-right: $gutter;
         color: $dim;
+
         &:hover {
           cursor: pointer;
           color: $accent;
         }
       }
     }
+
     &__slide--burger  {
       visibility: hidden;
       display: none;
     }
+
     &__slide--cl_btn {
       visibility: hidden;
       display: none;
