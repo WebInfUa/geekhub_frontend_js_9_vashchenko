@@ -1,0 +1,30 @@
+
+.header {
+  @include flex ($jc: space-between, $ai: center);
+  &__logo {
+    @include headers ($fsz: 1rem, $txt-al:center, $ff:$Logo-domine, $fw: 700);
+    letter-spacing: 0.02rem;
+    background-color: $primary;
+    border-radius: 0 0 0.5rem 0.5rem;
+    max-width: 7rem;
+    padding: 2.01rem 0.7rem 0.7rem;
+    &--link {
+      color: $white;
+    }
+    &--accent {
+      font-size: 1.2rem;
+      color: $dark;
+    }
+    &:hover {
+      background-color: $accent;
+    }
+  }
+  &__nav {
+    @include flex($jc: space-between, $ai: center);
+    width: 100%;
+    max-width: 22.51rem;
+    &--link {
+
+    }
+  }
+}

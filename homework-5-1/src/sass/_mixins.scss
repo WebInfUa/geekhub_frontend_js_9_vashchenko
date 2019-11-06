@@ -1,0 +1,39 @@
+@mixin headers ($fsz: 26px,
+                $ln-hei: 26px,
+                $clr: $dim-dark,
+                $ff:$Header-montser,
+                $fw:700,
+                $txt-trans: upercase,
+                $txt-al: left) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fsz;
+  text-transform: $txt-trans;
+  text-align: $txt-al;
+  line-height: $ln-hei;
+  color: $clr;
+}
+
+@mixin text ($fsz: 15px, $ln-hei: 22px, $ff:$Main-openSans, $clr:$txt-color, $txt-al: left) {
+  font-family: $ff;
+  font-size: $fsz;
+  text-align: $txt-al;
+  line-height: $ln-hei;
+  color: $clr;
+}
+
+@mixin link-txt ($clr: $accent, $fsz: 14px, $ff:$Header-montser, $txt-trans: upercase, $ln-hei: 20px) {
+  font-family: $ff;
+  font-size: $fsz;
+  text-transform: $txt-trans;
+  line-height: $ln-hei;
+  color: $clr;
+}
+
+@mixin flex ($fd: row, $jc:unset, $ai:unset) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+

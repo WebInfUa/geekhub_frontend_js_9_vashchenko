@@ -1,0 +1,8 @@
+.header__nav {
+  &--img {
+    background-image: url("src/img/Twitter_nav.png");
+    &:hover {
+      background-image: url("src/img/Twitter_png.png");
+    }
+  }
+}

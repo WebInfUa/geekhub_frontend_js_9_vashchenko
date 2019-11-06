@@ -1,0 +1,39 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+body { line-height: 1; }
+
+blockquote, q { quotes: none; }
+
+ol, ul { list-style: none; }
+
+q:before, q:after, blockquote:before, blockquote:after { content: ''; content: none; }
+
+:focus { outline: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+ins, a { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+html, body { font-size: 20px; background-color: #ffffff; }
+
+.wrapper { width: 100%; max-width: 47rem; margin: 0 auto; }
+
+.header__nav--img { background-image: url("src/img/Twitter_nav.png"); }
+
+.header__nav--img:hover { background-image: url("src/img/Twitter_png.png"); }
+
+.header { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+
+.header__logo { font-family: "Domine", serif; font-weight: 700; font-size: 1rem; text-transform: upercase; text-align: center; line-height: 26px; color: #465065; letter-spacing: 0.02rem; background-color: #fa5c65; border-radius: 0 0 0.5rem 0.5rem; max-width: 7rem; padding: 2.01rem 0.7rem 0.7rem; }
+
+.header__logo--link { color: #ffffff; }
+
+.header__logo--accent { font-size: 1.2rem; color: #314a5b; }
+
+.header__logo:hover { background-color: #f0454c; }
+
+.header__nav { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; max-width: 22.51rem; }
+
+/*# sourceMappingURL=main.css.map */
