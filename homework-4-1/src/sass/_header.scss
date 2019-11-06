@@ -1,0 +1,101 @@
+.header {
+  min-height: 42.5rem;
+  background: url(../src/img/header.png) center 100%;
+  @include flex(column, space-between);
+
+  &-nav {
+    @include flex($fd: row, $ai: center);
+    background-color: $bg_color;
+    padding: $gutter;
+  }
+
+  &-content {
+    text-align: center;
+    margin-top: -13rem;
+
+    &__headers {
+      color: $white;
+      font-size: 4rem;
+      text-transform: capitalize;
+    }
+
+    &__par {
+      font-size: 1.5rem;
+      color: $accent;
+      margin: 0.8rem;
+      padding: 0 .5rem;
+      font-family: $lato-flex;
+    }
+
+    &__sub {
+      font-size: .8rem;
+      color: $dim;
+      font-family: $monte-flex;
+      text-transform: uppercase;
+    }
+  }
+
+  &-logo {
+    @include flex(row, flex-start, center);
+
+    &__headers {
+      font-size: 1.25rem;
+      font-family: $lato-flex;
+      text-transform: uppercase;
+      color: $dark;
+      margin: 0 .8rem;
+
+      &--accent {
+        color: $accent;
+      }
+    }
+  }
+
+  &-menu {
+    @include flex(row, flex-end, center);
+    flex-grow: 1;
+    font-size: .8rem;
+
+    &__nav {
+      color: $dim;
+      margin-right: $gutter;
+
+      &--link {
+        margin-right: $gutter;
+        color: $dim;
+
+        &:hover {
+          cursor: pointer;
+          color: $accent;
+        }
+      }
+    }
+
+    &__slide--burger  {
+      visibility: hidden;
+      display: none;
+    }
+
+    &__slide--cl_btn {
+      visibility: hidden;
+      display: none;
+    }
+  }
+
+  &-download {
+    text-align: center;
+    flex: 0 0 auto;
+    position: relative;
+    bottom: -3rem;
+    &__par {
+      text-transform: capitalize;
+      color: $dim;
+      font-size: .7rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+#header-menu__slide-js {
+  width: 100%;
+}

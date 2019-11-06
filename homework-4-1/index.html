@@ -4,34 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <title>Title</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext">
   <link rel="stylesheet" href="css/main.css">
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </head>
-<body class="wrapper">
-<header class="flx_col header">
+<body>
+<header class="wrapper header">
   <section class="header-nav">
     <a href="#" title="Index page ForkIO">
-      <div class="app-logo">
-        <object class="app-logo__svg" type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
-          <img class="app-logo__img" src="src/img/icon/logo.png" width="40" height="39" align="left"
+      <div class="header-logo">
+        <object class="header-logo__svg" type="image/svg+xml" data="src/svg/logo.svg" name="Fork app logo">
+          <img class="header-logo__img" src="src/img/icon/logo.png" align="left"
                alt="Fork application logo">
         </object>
-        <h1 class="app-logo__headers">fork<span class="app-logo__headers--accent">io</span></h1>
+        <h1 class="header-logo__headers">fork<span class="header-logo__headers--accent">io</span></h1>
       </div>
     </a>
-    <div class="menu">
-      <nav class="menu__nav">
-        <span class="menu__slide--burger" onclick="openNav()">&#9777;</span>
-        <div id="menu__slide-js">
-          <a class="menu__slide--cl_btn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
-          <a class="menu__nav--link" href="#over" aria-label="Overview">Overview</a>
-          <a class="menu__nav--link" href="#about" aria-label="Link about Fork Io section">About fork</a>
-          <a class="menu__nav--link" href="#buying" aria-label="link on Byu">Buying options</a>
-          <a class="menu__nav--link" href="#support" aria-label="link on support page">Support</a>
+    <div class="header-menu">
+      <nav class="header-menu__nav">
+        <span class="header-menu__slide--burger" onclick="isOpenNav()">&#9777;</span>
+        <div id="header-menu__slide-js">
+          <a class="header-menu__slide--cl_btn" onclick="isCloseNav()">&times;</a>
+          <a class="header-menu__nav--link" href="#over" aria-label="Overview">Overview</a>
+          <a class="header-menu__nav--link" href="#about" aria-label="Link about Fork Io section">About fork</a>
+          <a class="header-menu__nav--link" href="#buying" aria-label="link on Byu">Buying options</a>
+          <a class="header-menu__nav--link" href="#support" aria-label="link on support page">Support</a>
         </div>
       </nav>
-      <button class="button__accent menu__button_buy" type="submit" id="buy" name="buyApp_btn">buy now</button>
+      <button class="button__accent header-menu__button_buy" type="submit" id="buy" name="buyApp_btn">buy now</button>
     </div>
   </section>
   <section class="header-content">
@@ -39,27 +42,33 @@
     <p class="header-content__par">A real gamechanger in the world of web-development</p>
     <p class="header-content__sub">v. 2.8 For Mac and Windows</p>
   </section>
-  <section class="download-section">
-    <button class="button__accent download-section__button" type="button" id="trial" name="trial_btn">Download for free
+  <section class="header-download">
+    <button class="button__accent header-download__button" type="button" id="trial" name="trial_btn">Download for free
       now
     </button>
-    <p class="download-section__par">unlimited 30-days trial period</p>
+    <p class="header-download__par">unlimited 30-days trial period</p>
   </section>
 </header>
-<main>
+<main class="wrapper">
   <section id="over" class="revolution-section">
     <h3 class="revolution-section__headers">Revolutionary editor</h3>
     <p class="revolution-section__par">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate
       dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
     <div class="git-button">
-      <a class="github-button" href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/subscription"
-         data-icon="octicon-eye" data-show-count="true"
+      <a class="github-button" 
+         href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/subscription"
+         data-icon="octicon-eye" 
+         data-show-count="true"
          aria-label="Watch WebInfUa/geekhub_frontend_js_9_vashchenko on GitHub">Watch</a>
-      <a class="github-button" href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko"
-         data-icon="octicon-star" data-show-count="true"
+      <a class="github-button" 
+         href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko"
+         data-icon="octicon-star" 
+         data-show-count="true"
          aria-label="Star WebInfUa/geekhub_frontend_js_9_vashchenko on GitHub">Star</a>
-      <a class="github-button" href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/fork"
-         data-icon="octicon-repo-forked" data-show-count="true"
+      <a class="github-button" 
+         href="https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/fork"
+         data-icon="octicon-repo-forked" 
+         data-show-count="true"
          aria-label="Fork WebInfUa/geekhub_frontend_js_9_vashchenko on GitHub">Fork</a>
     </div>
   </section>
@@ -80,8 +89,7 @@
       </div>
       <section class="you-get-content">
         <div class="flx_row">
-          <object class="you-get-content__svg" type="image/svg+xml" data="src/svg/web_better.svg" width="111"
-                  height="64" name="">
+          <object class="you-get-content__svg" type="image/svg+xml" data="src/svg/web_better.svg" width="111" height="64" name="">
             <img src="src/img/icon/web_better.png" alt="">
           </object>
           <div>
@@ -252,7 +260,7 @@
         <p class="blog-block__par">Proin id ligula eget massa tincidunt molestie. Morbi urna lectus, molestie vel quam vel, iaculis fermentum
           nunc. Morbi imperdiet, leo in interdum pretium.</p>
       </div>
-      <button class="blog-block__button">Go to Release Log</button>
+      <a href="#" aria-label="Release log" class="blog-block__button">Go to Release Log</a>
     </div>
     <div class="blog-block">
       <h4 class="blog-block__main-headers">Popular Extensions</h4>
@@ -267,7 +275,7 @@
         <h5 class="blog-block__sub-headers">Renamy</h5>
         <p class="blog-block__par">Vivamus consectetur suscipit elit, ut lacinia diam elementum et.</p>
       </div>
-      <button class="blog-block__button">Go to Marketplace</button>
+      <a href="#" aria-label="Marketplace" class="blog-block__button">Go to Marketplace</a>
     </div>
     <div class="blog-block">
       <h4 class="blog-block__main-headers">New From the Blog</h4>
@@ -283,19 +291,19 @@
         <h5 class="blog-block__sub-headers">Phasellus in augue risus.</h5>
         <p class="blog-block__par">January 23, 2015</p>
       </div>
-      <button class="blog-block__button">Go to Blog</button>
+      <a href="#" aria-label="Blog" class="blog-block__button">Go to Blog</a>
     </div>
   </section>
 </main>
 
-<footer class="footer">
+<footer class="wrapper footer">
   <div class="footer__block">
     <a href="#" aria-label="Go to up page Fork IO">
       <div class="footer-logo">
-        <object class="app-logo__svg" type="image/svg+xml" data="src/svg/logo.svg" width="111" height="64" name="">
-          <img class="app-logo__img" src="src/img/icon/logo.png" alt="Logo Fork IO">
+        <object class="header-logo__svg" type="image/svg+xml" data="src/svg/logo.svg" width="111" height="64" name="">
+          <img class="header-logo__img" src="src/img/icon/logo.png" alt="Logo Fork IO">
         </object>
-        <h1 class="app-logo__headers">fork<span class="app-logo__headers--accent">io</span></h1>
+        <h1 class="header-logo__headers">fork<span class="app-logo__headers--accent">io</span></h1>
       </div>
     </a>
     <p class="footer-logo__par">Lorem ipsum dolor sit amet, feugiat delicat liberavisse id cum no quo.</p>
@@ -328,15 +336,15 @@
 </footer>
 
 <script>
-  function openNav() {
-      document.getElementById("menu__slide-js").style.width = "10rem";
+  function isOpenNav() {
+      document.getElementById("header-menu__slide-js").style.display = "block";
   }
 
-  function closeNav() {
-    document.getElementById("menu__slide-js").style.width = null;
+  function isCloseNav() {
+    document.getElementById("header-menu__slide-js").style.display = null;
   }
 
-  window.matchMedia("(min-width: 992px)").addListener(closeNav);
+  window.matchMedia("(min-width: 992px)").addListener(isCloseNav);
 </script>
 </body>
 </html>

@@ -2,10 +2,8 @@
 **/.idea
 **/node_modules
 *.psd
-**/sass
-**/scss
-*.map
-**.map
 
+*.map
 *.css.map
+**.map
 **.css.map

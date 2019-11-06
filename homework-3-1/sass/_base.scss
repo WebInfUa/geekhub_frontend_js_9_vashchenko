@@ -1,0 +1,25 @@
+@import "fonts";
+
+html, body {
+  width: 100%;
+  background-color: #ffffff;
+  font-family: monte-flex, sans-serif;
+  font-size: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+
+.flx_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flx_col {
+  display: flex;
+  flex-direction: column;
+}

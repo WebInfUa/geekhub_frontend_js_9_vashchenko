@@ -1,0 +1,114 @@
+.subscribe {
+  &-section {
+    background: $dim_accent url("../src/img/Layer2.png") center 100%;
+    padding-bottom: 2rem;
+    text-align: center;
+    &__headers {
+      margin: 0 auto;
+      font-size: 2.4rem;
+      color: $bg_color;
+      text-align: center;
+      text-transform: capitalize;
+      border-top: 1px solid rgba(199, 199, 199, .2);
+      padding: 4.5rem 3.5rem 0;
+    }
+    &__par {
+      width: 70%;
+      margin: 0 auto;
+      font-family: $source-flex;
+      line-height: 1.5rem;
+      font-size: .7rem;
+      color: $amethyst;
+    }
+  }
+  &-block {
+    @include flex (row, space-between, center);
+    color: $bg_color;
+    max-width: 90%;
+    margin: 3.5rem auto 4rem;
+    &__headers {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+    }
+  }
+  &-cards {
+    margin: .6rem;
+    width: 80%;
+    max-width: 15rem;
+    height: 23rem;
+    background-color: rgba(255, 255, 255, .1);
+    transition: .5s linear;
+    &__headers {
+      transition: .5s linear;
+      background-color: rgba(255, 255, 255, .2);
+      font-size: 1.2rem;
+      padding: 2rem 0;
+      text-transform: uppercase;
+    }
+    &__price {
+      transition: .5s linear;
+      font-size: 3rem;
+      margin: 1.8rem auto;
+    }
+    &__par {
+      transition: .5s linear;
+      height: 100%;
+      max-height: 3.3rem;
+      line-height: 1.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+      font-size: .8rem;
+      padding: 0 1rem;
+    }
+    &--accent {
+      transition: .5s linear;
+      font-size: .7rem;
+      opacity: .3;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem;
+      border-bottom: .25rem solid $accent;
+    }
+    &:hover {
+      margin: .6rem;
+      width: 100%;
+      max-width: 15rem;
+      height: 28rem;
+      background-color: rgba(0, 0, 0, .2);
+      .subscribe-cards__headers {
+        background-color: rgba(0, 0, 0, .3);
+      }
+      .subscribe-cards__price {
+        font-size: 4rem;
+      }
+      .package_name {
+        font-size: 1rem;
+        line-height: 2rem;
+        max-height: 4rem;
+        margin-bottom: 2rem;
+      }
+      .subscribe-cards__par {
+        font-size: 1rem;
+      }
+      .subscribe-cards__buttons {
+        font-size: .8rem;
+        padding: .9rem 1.8rem;
+        &:hover {
+          background-color: rgba(255, 255, 255, .3);
+        }
+      }
+    }
+  }
+  &-form {
+    @include flex(row, space-between, center);
+    background-color: $bg_color;
+    padding: 2rem 3rem;
+    &__par {
+      color: $dim;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      width: 100%;
+    }
+  }
+}
