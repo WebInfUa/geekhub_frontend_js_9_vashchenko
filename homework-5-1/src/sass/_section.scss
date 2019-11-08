@@ -1,0 +1,99 @@
+.intelig {
+  margin-top: 9rem;
+
+  &__par {
+    @include text($fsz: 1rem, $clr: $dark);
+    margin: 1.3rem 0 3.2rem;
+  }
+
+  &__button {
+    @include link-txt($clr: $white, $fsz: .75rem, $ff: $Main-openSans);
+    background-color: $primary;
+    border-radius: .3rem;
+    padding: 1.2rem 2.1rem;
+  }
+}
+
+.article {
+  @include flex($jc: space-between);
+  margin-top: 4.3rem;
+
+  &__block {
+    max-width: 13rem;
+
+    &--par {
+      @include text($txt-al: justify);
+      margin: 1.3rem 0;
+    }
+
+    &--link {
+      @include link-txt();
+    }
+  }
+}
+
+.portfolio {
+  @include flex($ai: center);
+  margin: 5rem 0;
+
+  &__img {
+    overflow: hidden;
+    width: 100%;
+    max-width: 20.3rem;
+    margin-right: 4rem;
+
+    &--position {
+      position: relative;
+      left: -6rem;
+    }
+  }
+
+  &__block {
+    max-width: 18rem;
+
+    &--sub-head {
+      @include text($fsz: .8rem, $ln-hei: 1rem, $clr: $dark);
+      margin: .85rem 0 1.5rem;
+    }
+
+    &--par {
+      @include text();
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.team {
+  &__head--par {
+    @include text();
+    margin: .8rem 0 2rem;
+  }
+
+  &__block {
+    @include flex();
+
+    &--card {
+      margin-right: 2rem;
+      max-width: 15rem;
+    }
+
+    &--img {
+      float: left;
+      margin-right: 1rem;
+    }
+
+    &--profession {
+      @include text($clr: $accent);
+      margin: .5rem 0 .7rem;
+    }
+
+    &--par {
+      @include text();
+    }
+
+    &--more {
+      text-align: right;
+      margin: 2.3rem 1rem 3rem;
+    }
+  }
+}

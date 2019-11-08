@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="Web-vo" />
+  <meta name="description" content="It is the test freelancer template. Created by Vashchenko Oleksandr"/>
+  <meta name="keywords" content="Sass, BEM, Adaptive"/>
+  <meta name="author" content="web-vo" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Domine:700&display=swap&subset=latin-ext">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap&subset=latin-ext">
@@ -14,44 +14,109 @@
 
 </head>
 <body>
-<div>
+<div class="background-img">
+  <header class="wrapper header">
+      <h1 class="header__logo page-headers--logo"><a class="header__logo--link" href="#" aria-label="" target="_self">freelancer<span class="header__logo--accent">.</span></a></h1>
+      <nav class="header__nav">
+        <a class="header__nav--link" href="#" aria-label="Link on page about me" target="_self">about</a>
+        <a class="header__nav--link" href="#" aria-label="Link on My work" target="_self">work</a>
+        <a class="header__nav--link" href="#" aria-label="Link on my portfolio" target="_self">portfolio</a>
+        <a class="header__nav--link" href="#" aria-label="Link on my contact" target="_self">contact</a>
+        <a href="#" aria-label="My twitter" target="_blank">
+            <img class="header__nav--img" src="src/img/Twitter_nav.png" alt="Twitter" title="My twitter link">
+        </a>
+        <a href="#" aria-label="My faceBook" target="_blank">
+          <img class="header__nav--img" src="src/img/Facebook_nav.png" alt="Twitter" title="My twitter link">
+        </a>
+      </nav>
+    </header>
 
-<header class="wrapper header">
-    <h1 class="header__logo"><a class="header__logo--link" href="#" aria-label="" target="_self">Freelancer<span class="header__logo--accent">.</span></a></h1>
-    <nav class="header__nav">
-      <a class="header__nav--link" href="#" aria-label="" target="_self">about</a>
-      <a class="header__nav--link" href="#" aria-label="" target="_self">work</a>
-      <a class="header__nav--link" href="#" aria-label="" target="_self">portfolio</a>
-      <a class="header__nav--link" href="#" aria-label="" target="_self">contact</a>
-      <a class="header__nav--img" href="#" aria-label="" target="_self">
-          <img class="header__nav--img" src="src/img/Twitter_png.png" alt="Twitter" title="My twitter link">
-      </a>
-      <a class="header__nav--link" href="#" aria-label="" target="_self">
-        <img src="src/img/facebook_png.png" alt="FaceBook" title="My facebook link">
-      </a>
-    </nav>
-  </header>
-  <section class="">
-    <p class="">intelligence is nothing without ambition.</p>
-    <p class="">We’re small but impressive creative agency.</p>
-    <a class="" href="#" aria-label="" target="_self">read more</a>
-  </section>
+    <section class="wrapper intelig">
+      <p class="page-headers page-headers--intelig">intelligence is nothing without ambition<span class="color-accent">.</span></p>
+      <p class="intelig__par">We’re small but impressive creative agency.</p>
+      <a class="intelig__button" href="#" aria-label="Read more" target="_self">read more</a>
+    </section>
 </div>
-<main class="wrapper">
-  <section class="">
 
-  </section>
-  <section class="">
+  <main class="wrapper">
+    <section class="article">
+      <article class="article__block">
+        <h3 class="page-headers">Peace <br />of&nbsp;Mind<span class="color-accent">.</span></h3>
+        <p class="article__block--par">You’re safe with us. The privacy and security of your financial information is our top priority.</p>
+        <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
+      </article>
+      <article class="article__block">
+        <h3 class="page-headers">Free<span class="color-accent">.</span> Actually&nbsp;free</h3>
+        <p class="article__block--par">No more pricing grids. No more fine print. Sending and receiving cash is free without gimmicks.</p>
+        <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
+      </article>
+      <article class="article__block">
+        <h3 class="page-headers">Simple payments<span class="color-accent">.</span></h3>
+        <p class="article__block--par">The same debit card you use to buy coffee lets deposit money straight to your bank account.</p>
+        <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
+      </article>
+    </section>
 
-  </section>
-</main>
-<footer class="">
-  <div class="">
+    <section class="portfolio">
+      <div class="portfolio__img">
+        <img class="portfolio__img--position"
+             srcset="src/img/MacBook_250w.png 300w,
+               src/img/MacBook_500w.png 600w,
+               src/img/MacBook_966w.png 900w"
+             sizes="(max-width: 450px) 15rem,
+               (max-width: 900px) 20rem,
+               31rem"
+             src="src/img/MacBook_966w.png" alt="MacBook web site" title="My site in the MacBook">
+      </div>
+      <div class="portfolio__block">
+        <h3 class="page-headers page-headers--portfolio">portfolio<span class="color-accent">.</span></h3>
+        <p class="portfolio__block--sub-head"><strong>We are small, but strong team</strong></p>
+        <p class="portfolio__block--par">No more pricing grids. No more fine print. Sending and receiving cash is free without gimmicks.</p>
+        <p class="portfolio__block--par">The same debit card you use to buy coffee lets deposit money straight to your bank account.</p>
+        <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
+      </div>
+    </section>
 
-  </div>
-  <div class="">
+    <section class="team">
+      <div class="team__head">
+        <h3 class="page-headers page-headers--team">our team<span class="color-accent">.</span></h3>
+        <p class="team__head--par">They are big but still friendly.</p>
+      </div>
+      <div class="team__block">
+        <div class="team__block--card">
+          <img class="team__block--img" src="src/img/Photo1.png" alt="" title="">
+          <p class="page-headers">joey</p>
+          <p class="team__block--profession">Web developer</p>
+          <p class="team__block--par">Coffee lover.  Always on bike. iPhone fan.</p>
+        </div>
+        <div class="team__block--card">
+          <img class="team__block--img" src="src/img/Photo2.png" alt="" title="">
+          <p class="page-headers">matt</p>
+          <p class="team__block--profession">Web developer</p>
+          <p class="team__block--par">MTB Biker. Photoshop Master. Loving Father.</p>
+        </div>
+        <div class="team__block--card">
+          <img class="team__block--img" src="src/img/Photo3.png" alt="" title="">
+          <p class="page-headers">mike</p>
+          <p class="team__block--profession">Copywriter</p>
+          <p class="team__block--par">Drummer. Soup lover. Beer Drinker. Cyclist.</p>
+        </div>
+      </div>
+      <p class="team__block--more"><a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a></p>
+    </section>
+  </main>
 
-  </div>
-</footer>
+  <footer class="wrapper footer">
+    <div class="footer__icon">
+      <a class="footer__icon--social" href="#" aria-label="My twitter account" target="_blank"><img class="" src="src/img/Twitter_png.png" alt="" title=""></a>
+      <a class="footer__icon--social" href="#" aria-label="My instagram account" target="_blank"><img class="" src="src/img/Instagram_png.png" alt="" title=""></a>
+      <a class="footer__icon--social" href="#" aria-label="My facebook account" target="_blank"><img class="" src="src/img/facebook_png.png" alt="" title=""></a>
+      <a class="footer__icon--social" href="#" aria-label="My google account" target="_blank"><img class="" src="src/img/google_png.png" alt="" title=""></a>
+    </div>
+    <div class="footer__copy">
+      <p class="footer__copy--info">© Freelancer - Designed by Wojtek Kwiatkowski</p>
+    </div>
+  </footer>
+
 </body>
 </html>
