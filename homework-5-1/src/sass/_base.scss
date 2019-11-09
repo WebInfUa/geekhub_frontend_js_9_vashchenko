@@ -35,7 +35,7 @@ html, body {
   }
 
   &--article {
-  //  use default styles from the mixin
+    white-space: pre-line;
   }
 
   &--portfolio {

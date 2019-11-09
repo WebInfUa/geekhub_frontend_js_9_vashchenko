@@ -22,10 +22,10 @@
         <a class="header__nav--link" href="#" aria-label="Link on My work" target="_self">work</a>
         <a class="header__nav--link" href="#" aria-label="Link on my portfolio" target="_self">portfolio</a>
         <a class="header__nav--link" href="#" aria-label="Link on my contact" target="_self">contact</a>
-        <a href="#" aria-label="My twitter" target="_blank">
+        <a class="header__nav--link" href="#" aria-label="My twitter" target="_blank">
             <img class="header__nav--img" src="src/img/Twitter_nav.png" alt="Twitter" title="My twitter link">
         </a>
-        <a href="#" aria-label="My faceBook" target="_blank">
+        <a class="header__nav--link" href="#" aria-label="My faceBook" target="_blank">
           <img class="header__nav--img" src="src/img/Facebook_nav.png" alt="Twitter" title="My twitter link">
         </a>
       </nav>
@@ -41,17 +41,18 @@
   <main class="wrapper">
     <section class="article">
       <article class="article__block">
-        <h3 class="page-headers">Peace <br />of&nbsp;Mind<span class="color-accent">.</span></h3>
+        <h3 class="page-headers page-headers--article">Peace
+          of&nbsp;Mind<span class="color-accent">.</span></h3>
         <p class="article__block--par">You’re safe with us. The privacy and security of your financial information is our top priority.</p>
         <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
       </article>
       <article class="article__block">
-        <h3 class="page-headers">Free<span class="color-accent">.</span> Actually&nbsp;free</h3>
+        <h3 class="page-headers page-headers--article">Free<span class="color-accent">.</span> Actually&nbsp;free</h3>
         <p class="article__block--par">No more pricing grids. No more fine print. Sending and receiving cash is free without gimmicks.</p>
         <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
       </article>
       <article class="article__block">
-        <h3 class="page-headers">Simple payments<span class="color-accent">.</span></h3>
+        <h3 class="page-headers page-headers--article">Simple payments<span class="color-accent">.</span></h3>
         <p class="article__block--par">The same debit card you use to buy coffee lets deposit money straight to your bank account.</p>
         <a class="color-accent article__block--link" href="#" aria-label="Read more" target="_self">More&nbsp;&rarr;</a>
       </article>
@@ -61,10 +62,8 @@
       <div class="portfolio__img">
         <img class="portfolio__img--position"
              srcset="src/img/MacBook_250w.png 300w,
-               src/img/MacBook_500w.png 600w,
                src/img/MacBook_966w.png 900w"
-             sizes="(max-width: 450px) 15rem,
-               (max-width: 900px) 20rem,
+             sizes="(max-width: 768px) 15rem,
                31rem"
              src="src/img/MacBook_966w.png" alt="MacBook web site" title="My site in the MacBook">
       </div>
@@ -84,19 +83,19 @@
       </div>
       <div class="team__block">
         <div class="team__block--card">
-          <img class="team__block--img" src="src/img/Photo1.png" alt="" title="">
+          <img class="team__block--img" src="src/img/Photo1.png" alt="photo Joey" title="Joey love food">
           <p class="page-headers">joey</p>
           <p class="team__block--profession">Web developer</p>
           <p class="team__block--par">Coffee lover.  Always on bike. iPhone fan.</p>
         </div>
         <div class="team__block--card">
-          <img class="team__block--img" src="src/img/Photo2.png" alt="" title="">
+          <img class="team__block--img" src="src/img/Photo2.png" alt="photo Matt" title="Matt web developer">
           <p class="page-headers">matt</p>
           <p class="team__block--profession">Web developer</p>
           <p class="team__block--par">MTB Biker. Photoshop Master. Loving Father.</p>
         </div>
         <div class="team__block--card">
-          <img class="team__block--img" src="src/img/Photo3.png" alt="" title="">
+          <img class="team__block--img" src="src/img/Photo3.png" alt="photo Mike" title="Mike is copywriter">
           <p class="page-headers">mike</p>
           <p class="team__block--profession">Copywriter</p>
           <p class="team__block--par">Drummer. Soup lover. Beer Drinker. Cyclist.</p>
@@ -108,10 +107,10 @@
 
   <footer class="wrapper footer">
     <div class="footer__icon">
-      <a class="footer__icon--social" href="#" aria-label="My twitter account" target="_blank"><img class="" src="src/img/Twitter_png.png" alt="" title=""></a>
-      <a class="footer__icon--social" href="#" aria-label="My instagram account" target="_blank"><img class="" src="src/img/Instagram_png.png" alt="" title=""></a>
-      <a class="footer__icon--social" href="#" aria-label="My facebook account" target="_blank"><img class="" src="src/img/facebook_png.png" alt="" title=""></a>
-      <a class="footer__icon--social" href="#" aria-label="My google account" target="_blank"><img class="" src="src/img/google_png.png" alt="" title=""></a>
+      <a class="footer__icon--social" href="#" aria-label="My twitter account" target="_blank"><img class="" src="src/img/Twitter_png.png" alt="My twitter" title="Visit my Twitter"></a>
+      <a class="footer__icon--social" href="#" aria-label="My instagram account" target="_blank"><img class="" src="src/img/Instagram_png.png" alt="My instagram" title="Visit my Insta blog"></a>
+      <a class="footer__icon--social" href="#" aria-label="My facebook account" target="_blank"><img class="" src="src/img/facebook_png.png" alt="My facebook" title="Visit my FaceBook"></a>
+      <a class="footer__icon--social" href="#" aria-label="My google account" target="_blank"><img class="" src="src/img/google_png.png" alt="My google account" title="Welcome to my Google Account"></a>
     </div>
     <div class="footer__copy">
       <p class="footer__copy--info">© Freelancer - Designed by Wojtek Kwiatkowski</p>

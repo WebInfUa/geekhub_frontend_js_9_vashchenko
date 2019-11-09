@@ -1,5 +1,6 @@
 .header {
   @include flex($jc: space-between, $ai: center);
+  margin: 0 1rem;
 
   &__logo {
     letter-spacing: .02rem;
@@ -38,9 +39,6 @@
 
     &--img {
       max-height: .9rem;
-      &:hover {
-        filter: drop-shadow(0 0 .5rem $accent);
-      }
     }
   }
 }

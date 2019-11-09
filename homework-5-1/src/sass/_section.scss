@@ -1,5 +1,5 @@
 .intelig {
-  margin-top: 9rem;
+  margin: 9rem 1rem 0;
 
   &__par {
     @include text($fsz: 1rem, $clr: $dark);
@@ -20,6 +20,7 @@
 
   &__block {
     max-width: 13rem;
+    margin: .5rem;
 
     &--par {
       @include text($txt-al: justify);
@@ -64,6 +65,7 @@
 }
 
 .team {
+  margin: .5rem;
   &__head--par {
     @include text();
     margin: .8rem 0 2rem;
@@ -73,8 +75,8 @@
     @include flex();
 
     &--card {
-      margin-right: 2rem;
-      max-width: 15rem;
+      margin-right: 1rem;
+      max-width: 16rem;
     }
 
     &--img {
