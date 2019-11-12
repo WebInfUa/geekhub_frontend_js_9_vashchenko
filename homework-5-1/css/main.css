@@ -68,7 +68,7 @@ html, body { font-size: 20px; background-color: #ffffff; }
 
 .intelig { margin-top: 9rem; padding-left: 1rem; }
 
-@media (max-width: 768px) { .intelig { margin: 1rem .8rem; } }
+@media (max-width: 768px) { .intelig { padding: 0; margin: 1rem; } }
 
 .intelig__par { font-family: "Open Sans", sans-serif; font-size: 1rem; text-align: left; line-height: 1.3rem; color: #314a5b; margin-top: 1.3rem; margin-bottom: 3.2rem; }
 
