@@ -1,4 +1,4 @@
-.intelig {
+.intellig {
   @extend %margin-center;
   margin-top: 9rem;
   padding-left: 1rem;
@@ -20,6 +20,10 @@
     background-color: $primary;
     border-radius: .3rem;
     padding: 1.2rem 2.1rem;
+
+    &:hover, :active {
+      background-color: darken($primary, 10%) ;
+    }
   }
 }
 
@@ -51,6 +55,10 @@
 
     &--link {
       @include link-txt();
+
+      &:hover ,:active {
+        color: darken($primary, 25%);
+      }
     }
   }
 }
@@ -150,7 +158,7 @@
       }
 
       @media (max-width: 768px) {
-        margin: .3rem;
+        margin: .5rem;
         flex-direction: column;
       }
     }
@@ -179,6 +187,8 @@
 
       @media (max-width: 768px) {
         margin: .3rem 0;
+        color: $dim-dark;
+        font-weight: bold;
       }
     }
 
