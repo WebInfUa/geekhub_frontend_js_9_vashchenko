@@ -1,0 +1,25 @@
+//Colors
+$bg-color: #ffffff;
+$white: #ffffff;
+$primary: #fa5c65;
+$accent: #f0454c;
+$nav-accent: #c00c00;
+$nav-color: #263742;
+$silver: #e6eaed;
+$dim-silver: #b9c0c6;
+$dark: #314a5b;
+$dim-dark: #465065;
+$txt-color: #9aa0ab;
+
+//Fonts
+$Header-montser: 'Montserrat', sans-serif;
+$Logo-domine: 'Domine', serif;
+$Main-openSans: 'Open Sans', sans-serif;
+
+//Inheritance
+%margin-center {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
