@@ -6,15 +6,20 @@
   <meta name="description" content="This is learning page, when I firstly use the JS">
   <meta name="author" content="Vashchenko O.V.">
   <title>Title. JS first step</title>
+  <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
 <div id="jsHello" class="user"></div>
-<label for="arrayNumber">Enter minimum 3 number</label>
-<input id="arrayNumber" name="arrayNumber" placeholder="Enter integer numbers">
-<button id="js-send" type="submit">Send number</button>
-<button id="js-result" type="submit">Take result</button>
-<div id="js-message">Field of result</div>
+
+<div id="jsForm" class="form">
+  <label for="arrayNumber">Enter minimum 3 number</label>
+  <input id="arrayNumber" name="arrayNumber" placeholder="Enter integer numbers">
+  <button id="js-send" type="submit" onclick="numberArr" accesskey="13">Send number</button>
+  <button id="js-result" type="submit">Take result</button>
+</div>
+
+<div id="js-message" class="result">Field of result</div>
 
 <script src="firstJS.js"></script>
 </body>
