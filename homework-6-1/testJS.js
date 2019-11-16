@@ -37,16 +37,16 @@ function getResult() {
 
     let min = Number(arrNumber[0]);
     let max = min;
-    let max_index, min_index = 0;
+    let maxIndex, minIndex = 0;
 
     for (let i = 1; i < arrNumber.length; ++i) {
       if (arrNumber[i] > max) {
         max = Number(arrNumber[i]);
-        max_index = i;
+        maxIndex = i;
       }
       if (arrNumber[i] < min) {
         min = Number(arrNumber[i]);
-        min_index = i;
+        minIndex = i;
       }
     }
 
