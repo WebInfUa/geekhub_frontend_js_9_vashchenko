@@ -1,38 +1,19 @@
-//Find min, max, sum and replace in array
-let numArr = [];
+let numArr = [-35, 26, 48, 78, 19, -6, 0, 33, 71, 12, 23, 29, 100];
 
-for (let i = 0; i<10; i++) {
-  let randNum = parseInt( Math.random()*100 );
-  numArr.push(randNum);
-}
+console.log('My Array is = '+numArr);
+console.log('Sum all numbers in array = '+numArr.reduce((accumulator, currentValue)  => accumulator + currentValue, 0));
+const maxValue = Math.max.apply(null, numArr);
+console.log('Max number in Array = '+ maxValue);
+
+const minValue = Math.min.apply(null, numArr);
+console.log('Min number in Array = '+ minValue);
+
+const maxIndex = numArr.indexOf(maxValue);
+const minIndex = numArr.indexOf(minValue);
+numArr[maxIndex] = minValue;
+numArr[minIndex] = maxValue;
 console.log('My Array is = '+numArr);
 
-console.log('Sum all numbers in array = '+numArr.reduce((accumulator, currentValue)  => accumulator + currentValue));
-
-let min = numArr[0];
-let minIndex = 0;
-let max = 0;
-let maxIndex = 0;
-
-for (let i = 0; i < numArr.length; i++) {
-  if (numArr[i] > max) {
-    max = numArr[i];
-    maxIndex = i;
-  }
-  if (numArr[i] < min) {
-    min = numArr[i];
-    minIndex = i;
-  }
-}
-
-numArr[maxIndex] = min;
-numArr[minIndex] = max;
-
-console.log('Min number in Array = '+min);
-console.log('Max number in Array = '+max);
-console.log('Replace min max in array = '+numArr);
-
-// Callback
 function createSentences(text, callback){
   let sentence = 'Hello, amazing and crazy ' + text + ' world!';
   callback(sentence);
@@ -44,7 +25,6 @@ function logWrite(message){
 
 createSentences("JavaScript", logWrite);
 
-// fooBar
 function fooBar() {
   for (let i = 0; i < numArr.length; i++) {
     if (numArr[i] % 3 === 0 && numArr[i] % 7 === 0) {
@@ -60,7 +40,6 @@ function fooBar() {
 
 fooBar();
 
-//stringMatches
 function stringMatches (frsStr, secStr) {
   console.log('First string = "'+ frsStr+'"');
   console.log('Second string = "'+secStr+'"');
@@ -84,7 +63,14 @@ function stringMatches (frsStr, secStr) {
 
 }
 
-let randomStr1 =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, Math.random() * 15);
-let randomStr2 =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, Math.random() * 15);
+function randomStr(length) {
+  let result = '';
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
 
-stringMatches(randomStr1, randomStr2);
+stringMatches(randomStr(30), randomStr(25));
