@@ -1,17 +1,19 @@
+'use strict'
+
 let numArr = [-35, 26, 48, 78, 19, -6, 0, 33, 71, 12, 23, 29, 100];
 
 console.log('My Array is = '+numArr);
 console.log('Sum all numbers in array = '+numArr.reduce((accumulator, currentValue)  => accumulator + currentValue, 0));
-const maxValue = Math.max.apply(null, numArr);
-console.log('Max number in Array = '+ maxValue);
+const MAX_VALUE = Math.max.apply(null, numArr);
+console.log('Max number in Array = '+ MAX_VALUE);
 
-const minValue = Math.min.apply(null, numArr);
-console.log('Min number in Array = '+ minValue);
+const MIN_VALUE = Math.min.apply(null, numArr);
+console.log('Min number in Array = '+ MIN_VALUE);
 
-const maxIndex = numArr.indexOf(maxValue);
-const minIndex = numArr.indexOf(minValue);
-numArr[maxIndex] = minValue;
-numArr[minIndex] = maxValue;
+const MAX_INDEX = numArr.indexOf(MAX_VALUE);
+const MIN_INDEX = numArr.indexOf(MIN_VALUE);
+numArr[MAX_INDEX] = MIN_VALUE;
+numArr[MIN_INDEX] = MAX_VALUE;
 console.log('My Array is = '+numArr);
 
 function createSentences(text, callback){
