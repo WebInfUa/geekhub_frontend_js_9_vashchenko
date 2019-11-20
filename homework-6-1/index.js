@@ -2,77 +2,81 @@
 
 let numArr = [-35, 26, 48, 78, 19, -6, 0, 33, 71, 12, 23, 29, 100];
 
-console.log('My Array is = '+numArr);
-console.log('Sum all numbers in array = '+numArr.reduce((accumulator, currentValue)  => accumulator + currentValue, 0));
-const MAX_VALUE = Math.max.apply(null, numArr);
-console.log('Max number in Array = '+ MAX_VALUE);
+//Task1
+let arrOperation = (array) => {
+  let arrSum = array.reduce((accumulator, currentValue)  => accumulator + currentValue, 0);
+  let maxValue = Math.max.apply(null, array);
+  let minValue = Math.min.apply(null, array);
+  let maxIndex = array.indexOf(maxValue);
+  let minIndex = array.indexOf(minValue);
+  array[maxIndex] = minValue;
+  array[minIndex] = maxValue;
+  let result = 'Sum = '+ arrSum +'\nMax = '+ maxValue +'\nMin = '+ minValue +'\nReplace = '+ numArr;
+  
+  return (result);
+}
 
-const MIN_VALUE = Math.min.apply(null, numArr);
-console.log('Min number in Array = '+ MIN_VALUE);
-
-const MAX_INDEX = numArr.indexOf(MAX_VALUE);
-const MIN_INDEX = numArr.indexOf(MIN_VALUE);
-numArr[MAX_INDEX] = MIN_VALUE;
-numArr[MIN_INDEX] = MAX_VALUE;
-console.log('My Array is = '+numArr);
-
-function createSentences(text, callback){
-  let sentence = 'Hello, amazing and crazy ' + text + ' world!';
+//Task2
+let createSentences = (text, callback) => {
+  let sentence = 'Callback = callback function '+ text;
   callback(sentence);
 }
 
-function logWrite(message){
-  console.log(message);
-}
+let logWrite = (message) => console.log(message);
 
-createSentences("JavaScript", logWrite);
-
-function fooBar() {
-  for (let i = 0; i < numArr.length; i++) {
-    if (numArr[i] % 3 === 0 && numArr[i] % 7 === 0) {
-      numArr[i] = 'foobar';
-    } else if (numArr[i] % 7 === 0) {
-      numArr[i] = 'bar';
-    } else if (numArr[i] % 3 === 0) {
-      numArr[i] = 'foo';
+//Task3
+let fooBar = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 3 === 0 && array[i] % 7 === 0) {
+      array[i] = 'foobar';
+    } else if (array[i] % 7 === 0) {
+      array[i] = 'bar';
+    } else if (array[i] % 3 === 0) {
+      array[i] = 'foo';
     }
   }
-  console.log('When number mod 3 or/and 7 = 0 replace on foo, bar or foobar = \n'+numArr);
+  
+  return array;
 }
 
-fooBar();
-
-function stringMatches (frsStr, secStr) {
-  console.log('First string = "'+ frsStr+'"');
-  console.log('Second string = "'+secStr+'"');
+//Task4
+let stringMatches = (frsStr, secStr, callback) => {
+  callback('First string = '+ frsStr);
+  callback('Second string = '+ secStr);
+  
   frsStr = frsStr.replace(/\s/g, '');
   secStr = secStr.replace(/\s/g, '');
-  let frsStrArr = [];
-  let secStrArr = [];
+  let frsStrArr = [], secStrArr = [];
+  
   for (let char of frsStr) {
     frsStrArr.push(char);
   }
+  
   for (let char of secStr) {
     secStrArr.push(char);
   }
+  
   let missingChar = frsStrArr.filter(n => secStrArr.indexOf(n) === -1);
-  console.log('First string length = '+ frsStrArr.length);
-  console.log('Second string length = '+ secStrArr.length);
-  console.log('Missing characters string length = '+ missingChar.length);
-  let result = ((frsStrArr.length - missingChar.length) / frsStrArr.length) * 100;
-  console.log('Mismatched characters in strings: '+ missingChar);
-  console.log('String coincidence = '+Math.round(result)+'%');
-
+  let percentOccurrence = Math.round(((frsStrArr.length - missingChar.length) / frsStrArr.length) * 100) + '%';
+  let result = 'String coincidence = '+ percentOccurrence;
+  
+  callback(result);
 }
 
-function randomStr(length) {
-  let result = '';
+let randomStr = (strLength) => {
+  let result = ''; 
   let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let charactersLength = characters.length;
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < strLength; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
+  
   return result;
 }
 
-stringMatches(randomStr(30), randomStr(25));
+
+logWrite('Array = '+numArr);
+logWrite(arrOperation(numArr));
+createSentences("write in console", logWrite);
+logWrite(fooBar(numArr));
+stringMatches(randomStr(30), randomStr(25), logWrite);
