@@ -111,8 +111,6 @@ g. Classes
     1. 
     2. 
 
-
-
 Other
   1. https://edabit.com/challenge/6AnQqiEjkJdZrWhPS
   1. img:
