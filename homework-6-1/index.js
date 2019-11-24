@@ -79,3 +79,46 @@ logWrite(arrOperation(numArr));
 createSentences("write in console", logWrite);
 logWrite(fooBar(numArr));
 stringMatches(randomStr(30), randomStr(25), logWrite);
+
+
+class StackCalc {
+  constructor() {
+    this.stack = [];
+  }
+
+  run(instructions) {
+    let i = instructions.split(" ").map((cV) => {
+      if (!isNaN(+cV)) this.stack.push(+cV);
+      if (isNaN(+cV)) {
+        switch (cV) {
+          case "+":
+            this.stack.push(this.stack.pop() + this.stack.pop());
+            break;
+          case "-":
+            this.stack.push(this.stack.pop() - this.stack.pop());
+            break;
+          case "*":
+            this.stack.push(this.stack.pop() * this.stack.pop());
+            break;
+          case "/":
+            this.stack.push(this.stack.pop() / this.stack.pop());
+            break;
+          case "DUP":
+            const popped = this.stack.pop();
+            this.stack.push(popped);
+            this.stack.push(popped);
+            break;
+          case "POP":
+            this.stack.pop();
+            break;
+          default:
+            return "Invalid instruction: " + cV
+        }
+      }
+    }).filter((cV) => cV);
+    if (i.length > 0) this.stack.push(i[0]);
+  }
+  get value() {
+    return this.stack [this.stack.length - 1] || 0;
+  }
+}
