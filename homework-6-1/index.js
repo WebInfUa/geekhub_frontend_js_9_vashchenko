@@ -87,10 +87,10 @@ class StackCalc {
   }
 
   run(instructions) {
-    let i = instructions.split(" ").map((cV) => {
-      if (!isNaN(+cV)) this.stack.push(+cV);
-      if (isNaN(+cV)) {
-        switch (cV) {
+    let i = instructions.split(" ").map((operValue) => {
+      if (!isNaN(+operValue)) this.stack.push(+operValue);
+      if (isNaN(+operValue)) {
+        switch (operValue) {
           case "+":
             this.stack.push(this.stack.pop() + this.stack.pop());
             break;
@@ -112,10 +112,10 @@ class StackCalc {
             this.stack.pop();
             break;
           default:
-            return "Invalid instruction: " + cV
+            return "Invalid instruction: " + operValue
         }
       }
-    }).filter((cV) => cV);
+    }).filter((operValue) => operValue);
     if (i.length > 0) this.stack.push(i[0]);
   }
   get value() {
