@@ -108,8 +108,9 @@ g. Classes
     1. https://edabit.com/challenge/Hgb38yhWGwJCMHbRQ
     2. https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/blob/hw_7/homework-7-1/PrtSc/classes_4.png
   v.  Challenge 5
-    1. 
-    2. 
+    1. https://edabit.com/challenge/o7fs6wQvjfu9iZE2j
+    2. https://github.com/WebInfUa/geekhub_frontend_js_9_vashchenko/blob/hw_7/homework-7-1/PrtSc/classes_4.png
+
 
 Other
   1. https://edabit.com/challenge/6AnQqiEjkJdZrWhPS
