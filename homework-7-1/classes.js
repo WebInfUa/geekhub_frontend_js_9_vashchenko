@@ -18,8 +18,8 @@ class Console {
   }
 
   history(range) {
-    let [start, end] = range;
     if(!range) return this.histories.join('\n');
+    let [start, end] = range;
     if (end < start) end = start;
     if (start < 0) start = 1;
     return this.histories.slice(start - 1, end).join('\n');
