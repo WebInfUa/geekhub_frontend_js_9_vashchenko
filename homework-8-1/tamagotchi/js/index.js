@@ -1,9 +1,13 @@
+// let pet = Object.assign(target{}, {},{},{}) - клонирует объекты в один объект
+
+
 $(document).ready(function() {
 
   let baseFood = 100;
   let baseHappy = 100;
   let baseWash = 100;
 
+  let maxStatTamagotchi = 100;
   // let easy = 3;
   // let hard = 5;
 
@@ -12,11 +16,11 @@ $(document).ready(function() {
   let counter = setInterval(timer, 500);
 
   let tamagotchi = {
-    'feed': baseFood,
-    'run': baseHappy,
-    'wash': baseWash,
+    feed: baseFood,
+    run: baseHappy,
+    wash: baseWash,
     isDead: function() {
-      if ((this.feed <= -1) || (this.wash <= -1) || (this.run <= -1)) {
+      if ((this.feed <=  -1) || (this.wash <= -1) || (this.run <= -1)) {
         return true;
       } else {
         return false;
@@ -97,7 +101,7 @@ $(document).ready(function() {
     tamagotchi.wash -= difficulty;
     time += .500;
 
-    if (tamagotchi.isDead() === true) {
+    if (tamagotchi.isDead()) {
       gameOver ();
       clearInterval(counter);
       document.getElementById('gameOverTime_js').innerText = `${time} seconds`;
@@ -105,18 +109,18 @@ $(document).ready(function() {
 
       function restart () {
         location.reload()
-      }
+      } 
     }
 
-    if (tamagotchi.feed > 100) {
+    if (tamagotchi.feed > maxStatTamagotchi) {
       tamagotchi.feed = 100;
     }
 
-    if (tamagotchi.run > 100) {
+    if (tamagotchi.run > maxStatTamagotchi) {
       tamagotchi.run = 100;
     }
 
-    if (tamagotchi.wash > 100) {
+    if (tamagotchi.wash > maxStatTamagotchi) {
       tamagotchi.wash = 100;
     }
 
