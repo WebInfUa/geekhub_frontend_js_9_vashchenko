@@ -1,4 +1,10 @@
 // let pet = Object.assign(target{}, {},{},{}) - клонирует объекты в один объект
+// Solid
+// MVC
+// Functional
+// throw try catch
+// error
+
 
 
 $(document).ready(function() {
@@ -109,7 +115,7 @@ $(document).ready(function() {
 
       function restart () {
         location.reload()
-      } 
+      }
     }
 
     if (tamagotchi.feed > maxStatTamagotchi) {
@@ -126,7 +132,7 @@ $(document).ready(function() {
 
     $('.game-start__meter--food').empty(0).append(tamagotchi.feed.toFixed(0));
     document.getElementById('feedMeter').value = tamagotchi.feed;
-
+ 
     $('.game-start__meter--wash').empty(0).append(tamagotchi.wash.toFixed(0));
     document.getElementById('washMeter').value = tamagotchi.wash;
 
