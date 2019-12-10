@@ -44,6 +44,9 @@ class Tamagotchi {
   }
 
   initStats () {
+    document.getElementById('gameStart_js').style.display = 'flex';
+    window.scrollTo({ top: document.body.scrollHeight, behavior:'smooth'});
+
     (this.level === 'hard' || this.level === 'pro') ? this.maxPoints = 40 : this.maxPoints = 90;
     this.UpdateCounter = setInterval(() => {
       let random_int = Tamagotchi.getRandNum(1,7);
