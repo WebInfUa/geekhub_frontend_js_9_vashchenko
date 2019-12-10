@@ -15,8 +15,10 @@ class Tamagotchi {
   socialization;
   money;
   counter;
+  classCollection;
   timer = 0;
   maxValue = 100;
+  hardMaxValue = 70;
   TimerCounter = setInterval(() => {this.timer += 1}, 1000);
 
   leaveStatus() {
@@ -43,7 +45,6 @@ class Tamagotchi {
 
   initStats () {
     (this.level === 'hard' || this.level === 'pro') ? this.maxPoints = 40 : this.maxPoints = 90;
-
     this.UpdateCounter = setInterval(() => {
       let random_int = Tamagotchi.getRandNum(1,7);
       (random_int === 1) ? this.feed += Tamagotchi.getRandNum(10,50) :
@@ -53,7 +54,7 @@ class Tamagotchi {
       (random_int === 5) ? this.socialization += Tamagotchi.getRandNum(10,50) :
         this.money += Tamagotchi.getRandNum(10,50) ;
       this.updateStats();
-    }, 20000);
+    }, 10000);
 
     this.feed = Tamagotchi.getRandNum(20,this.maxPoints);
     this.wash = Tamagotchi.getRandNum(20,this.maxPoints);
@@ -75,7 +76,6 @@ class Tamagotchi {
           this.updateStats();
         }, 2500);
         break;
-
       case 'hard':
         this.interval = setInterval(() => {
           this.feed -= 5;
@@ -88,7 +88,6 @@ class Tamagotchi {
           this.updateStats();
         }, 1500);
         break;
-
       case 'pro':
         this.interval = setInterval(() => {
           this.feed -= 7;
@@ -110,9 +109,9 @@ class Tamagotchi {
     document.getElementsByClassName('game-start__meter--food')[0].innerHTML = this.feed;
     document.getElementById('feedMeter').value = this.feed;
     document.getElementsByClassName('game-start__meter--wash')[0].innerHTML = this.wash;
-    document.getElementById('washMeter').value = `${this.wash}`;
+    document.getElementById('washMeter').value = this.wash;
     document.getElementsByClassName('game-start__meter--run')[0].innerHTML = this.happiness;
-    document.getElementById('runMeter').value = `${this.happiness}`;
+    document.getElementById('runMeter').value = this.happiness;
     document.getElementsByClassName('game-start__meter--health')[0].innerHTML = this.health;
     document.getElementById('healthMeter').value = this.health;
     document.getElementsByClassName('game-start__meter--social')[0].innerHTML = this.socialization;
@@ -121,107 +120,93 @@ class Tamagotchi {
     document.getElementById('moneyMeter').value = this.money;
   }
 
-  feedin() {
-    this.feed <= 70 ? this.feed += 30: this.feed = this.maxValue;
+  feeder() {
+    this.feed < 70 ? this.feed += 30: this.feed = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.feed < 40 ? this.feed += 30 : this.feed = this.hardMaxValue;
+    }
     this.wash -= 20;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('feed')[0].style.display = 'inline';
-    document.getElementsByClassName('feed')[1].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('feed')[0].style.display = 'none';
-      document.getElementsByClassName('feed')[1].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('feed');
+    this.displayInfo(this.classCollection);
   }
 
   washes() {
-    this.wash <= 60 ? this.wash += 40: this.wash = this.maxValue;
+    this.wash < 60 ? this.wash += 40: this.wash = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.wash < 30 ? this.wash += 40 : this.wash = this.hardMaxValue;
+    }
     this.happiness -= 20;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('wash')[0].style.display = 'inline';
-    document.getElementsByClassName('wash')[1].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('wash')[0].style.display = 'none';
-      document.getElementsByClassName('wash')[1].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('wash');
+    this.displayInfo(this.classCollection);
   }
 
   runs() {
-    this.happiness <= 85 ? this.happiness += 15: this.happiness = this.maxValue;
+    this.happiness < 85 ? this.happiness += 15: this.happiness = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.happiness < 55 ? this.happiness += 15 : this.happiness = this.hardMaxValue;
+    }
     this.feed -= 10;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('happiness')[0].style.display = 'inline';
-    document.getElementsByClassName('happiness')[1].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('happiness')[0].style.display = 'none';
-      document.getElementsByClassName('happiness')[1].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('happiness');
+    this.displayInfo(this.classCollection);
   }
 
   medicine() {
-    this.health <= 70 ? this.health += 30: this.health = this.maxValue + 1;
+    this.health < 70 ? this.health += 30: this.health = this.maxValue + 1;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.health < 40 ? this.health += 30 : this.health = this.hardMaxValue;
+    }
     this.money -= 20;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('medicine')[0].style.display = 'inline';
-    document.getElementsByClassName('medicine')[1].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('medicine')[0].style.display = 'none';
-      document.getElementsByClassName('medicine')[1].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('medicine');
+    this.displayInfo(this.classCollection);
   }
 
   bar() {
-    this.socialization <= 60 ? this.socialization += 40: this.socialization = this.maxValue;
+    this.socialization < 60 ? this.socialization += 40: this.socialization = this.maxValue;
     this.feed <= 90 ? this.feed += 10: this.feed = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.socialization < 30 ? this.socialization += 40 : this.socialization = this.hardMaxValue;
+      this.feed < 60 ? this.feed += 10: this.feed = this.hardMaxValue;
+    }
     this.money -= 20;
     this.health -= 10;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('bar')[0].style.display = 'inline';
-    document.getElementsByClassName('bar')[1].style.display = 'inline';
-    document.getElementsByClassName('bar')[2].style.display = 'inline';
-    document.getElementsByClassName('bar')[3].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('bar')[0].style.display = 'none';
-      document.getElementsByClassName('bar')[1].style.display = 'none';
-      document.getElementsByClassName('bar')[2].style.display = 'none';
-      document.getElementsByClassName('bar')[3].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('bar');
+    this.displayInfo(this.classCollection);
   }
 
   work() {
-    this.money <= 50 ? this.money += 50: this.money = this.maxValue;
+    this.money < 50 ? this.money += 50: this.money = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.money < 20 ? this.money += 50 : this.money = this.hardMaxValue;
+    }
     this.feed -= 10;
     this.health -= 10;
     this.socialization -= 20;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('work')[0].style.display = 'inline';
-    document.getElementsByClassName('work')[1].style.display = 'inline';
-    document.getElementsByClassName('work')[2].style.display = 'inline';
-    document.getElementsByClassName('work')[3].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('work')[0].style.display = 'none';
-      document.getElementsByClassName('work')[1].style.display = 'none';
-      document.getElementsByClassName('work')[2].style.display = 'none';
-      document.getElementsByClassName('work')[3].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('work');
+    this.displayInfo(this.classCollection);
   }
 
   shop() {
-    this.feed <= 80 ? this.feed += 20: this.feed = this.maxValue;
+    this.feed < 80 ? this.feed += 20: this.feed = this.maxValue;
+    if (this.level === 'hard' || this.level === 'pro') {
+      this.feed < 50 ? this.feed += 20 : this.feed = this.hardMaxValue;
+    }
     this.money -= 20;
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('shop')[0].style.display = 'inline';
-    document.getElementsByClassName('shop')[1].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('shop')[0].style.display = 'none';
-      document.getElementsByClassName('shop')[1].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('shop');
+    this.displayInfo(this.classCollection);
   }
 
   business() {
@@ -229,22 +214,30 @@ class Tamagotchi {
     this.happiness = 100;
     this.health -= 100;
     this.socialization -= 20;
+    if (this.level === 'hard') {
+      this.money = 70;
+      this.happiness = 70;
+      this.health -= 70;
+    }
     this.updateStats();
     this.leaveStatus();
-    document.getElementsByClassName('business')[0].style.display = 'inline';
-    document.getElementsByClassName('business')[1].style.display = 'inline';
-    document.getElementsByClassName('business')[2].style.display = 'inline';
-    document.getElementsByClassName('business')[3].style.display = 'inline';
-    setTimeout(function () {
-      document.getElementsByClassName('business')[0].style.display = 'none';
-      document.getElementsByClassName('business')[1].style.display = 'none';
-      document.getElementsByClassName('business')[2].style.display = 'none';
-      document.getElementsByClassName('business')[3].style.display = 'none';
-    }, 1000)
+    this.classCollection = document.getElementsByClassName('business');
+    this.displayInfo(this.classCollection);
   }
 
   killer() {
     this.health -= 1000;
+  }
+
+  displayInfo(elem) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].style.display = "inline";
+    }
+    setTimeout(() => {
+      for (let i = 0; i < elem.length; i++) {
+        elem[i].style.display = "none";
+      }
+    },1000);
   }
 
   gameOver() {
@@ -252,7 +245,6 @@ class Tamagotchi {
     document.getElementById('gameOver_js').style.display = 'block';
     document.getElementById('scream_js').play();
   }
-
 }
 
 function startGame (level) {
