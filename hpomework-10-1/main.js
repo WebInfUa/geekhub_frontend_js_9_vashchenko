@@ -5,7 +5,7 @@ let nodeFetch = require('node-fetch');
 async function getData(url) {
   try {
     let data = await nodeFetch(url);
-    return data;
+    return data.json();
   } catch (e) {
     throw "We have error in getData function";
   }
@@ -13,7 +13,7 @@ async function getData(url) {
 
 (async () => {
   try {
-    let responseData = getData('https://my-json-server.typicode.com/users/1');
+    let responseData = getData('https://https://my-json-server.typicode.com/typicode/demo');
     console.log(responseData);
   }catch (e) {
     console.log(e)
