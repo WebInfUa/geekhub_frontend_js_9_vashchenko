@@ -6,20 +6,11 @@ class Tamagotchi {
 
   constructor (level) {
     this.level = level;
+    this.timer = 0;
+    this.maxValue = 100;
+    this.hardMaxValue = 70;
+    this.TimerCounter = setInterval(() => {this.timer += 1}, 1000);
   }
-
-  feed;
-  wash;
-  happiness;
-  health;
-  socialization;
-  money;
-  counter;
-  classCollection;
-  timer = 0;
-  maxValue = 100;
-  hardMaxValue = 70;
-  TimerCounter = setInterval(() => {this.timer += 1}, 1000);
 
   leaveStatus() {
     if (this.feed < -1 || this.wash < -1 || this.happiness < -1 || this.health < -2 || this.socialization < -1 || this.money < -1 ){
@@ -173,7 +164,7 @@ class Tamagotchi {
 
   bar() {
     this.socialization < 60 ? this.socialization += 40: this.socialization = this.maxValue;
-    this.feed <= 90 ? this.feed += 10: this.feed = this.maxValue;
+    this.feed < 90 ? this.feed += 10: this.feed = this.maxValue;
     if (this.level === 'hard' || this.level === 'pro') {
       this.socialization < 30 ? this.socialization += 40 : this.socialization = this.hardMaxValue;
       this.feed < 60 ? this.feed += 10: this.feed = this.hardMaxValue;
