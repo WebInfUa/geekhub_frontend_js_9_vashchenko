@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <meta name="keywords" content="html, css, js, tamagotchi"/>
+  <meta name="description" content="Async, await, promises and callback hell - it is and more in this pages."/>
+  <meta name="url" content="">
+  <meta name="subject" content="https://github.com/WebInfUa">
+  <meta name="copyright" content="Vashchenko O.V.">
+  <meta name="abstract" content="This is studies project when we learn js: async, await (promises) and callback asynchronous code.">
+  <meta name="topic" content="Java Script">
+  <meta name="Classification" content="Learn">
+  <meta name="author" content="Vashchenko Oleksandr, web.inf.ua@gmail.com">
+  <meta name="designer" content="Vashchenko O.V.">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/main.js"></script>
+
+</head>
+<body>
+<header class="col-md-8 col-md-offset-2 container">
+  <h1 class="text-center">Take data from the Server</h1>
+  <p class="bg-info text-center">Enter your url or use default value for the take data from the server</p>
+</header>
+<main class="col-md-8 col-md-offset-2 container-fluid">
+  <form>
+    <div class="radio">
+      <label>
+        <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" onclick="defUrl()">
+        Use default URL
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="serverUrl">URL server address</label>
+      <input type="url" class="form-control" id="serverUrl" placeholder="server URL">
+    </div>
+    <div class="form-group">
+      <label for="serverResult">Request result</label>
+      <textarea id="serverResult" class="form-control" rows="5"></textarea>
+    </div>
+      <button type="submit" class="btn btn-success" onclick="takeData()">Submit</button>
+      <button type="reset" class="btn btn-warning">Reset form</button>
+  </form>
+</main>
+
+</body>
+</html>
