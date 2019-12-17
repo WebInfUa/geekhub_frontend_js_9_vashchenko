@@ -1,6 +1,9 @@
-let nodeFetch = require('node-fetch');
+'use strict';
+
+const nodeFetch = require("node-fetch");
 
 async function getData(url) {
+  console.log(url);
   try {
     let data = await nodeFetch(url);
     let res;
@@ -13,6 +16,7 @@ async function getData(url) {
 
 async function takeData() {
   const url = document.getElementById('serverUrl').value;
+  console.log(`take data url - ${url}`);
   try {
     document.getElementById('serverResult').value = await getData(url);
     console.log('function getData: Server request is - Successful');
@@ -30,4 +34,3 @@ function defUrl() {
     document.getElementById('serverUrl').value=''
   }
 }
-
