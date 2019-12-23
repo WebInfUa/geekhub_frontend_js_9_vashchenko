@@ -1,46 +1,21 @@
 'use strict';
 
-async function getData(url) {
-  debugger;
-  console.log(url);
-    debugger;
-    let data = await fetch(url);
-    let res;
+const getData= async (url) => {
+  let res = "Ou ou, we have some problem. Check you URL or try use default URL";
+  let data = await fetch(url);
   if (data.ok) {
-      debugger;
-      res = await data.text();
-      debugger;
-      return res;
-  } else {
-      res = "Ou ou, we have some problem. Check you URL or try use default URL";
-      debugger;
-      return res;
+    res = await data.text();
   }
-}
+  return res;
+};
 
-async function takeData() {
-  debugger;
+const takeData = async () => {
   const url = document.getElementById('serverUrl').value;
-  debugger;
-  console.log(`take data url - ${url}`);
-  debugger;
-  let result;
-    debugger;
-    result = await getData(url);
-    debugger;
-    document.getElementById('serverResult').value = result;
-    debugger;
-    console.log('function getData: Server request is - Successful');
-}
+  document.getElementById('serverResult').value = await getData(url);
+};
 
-function defUrl() {
-  debugger;
-  let status = document.getElementById('optionsRadios1').checked;
-  if (status) {
-    debugger;
-    document.getElementById('serverUrl').value='https://my-json-server.typicode.com/typicode/demo/posts';
-  } else {
-    debugger;
-    document.getElementById('serverUrl').value=''
-  }
-}
+const defUrl = () => (document.getElementById('optionsRadios1').checked === true) ?
+  document.getElementById('serverUrl').value='https://my-json-server.typicode.com/typicode/demo/posts' :
+  document.getElementById('serverUrl').value='';
+
+

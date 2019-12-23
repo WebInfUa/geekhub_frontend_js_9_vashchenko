@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Request on server</title>
 
-  <meta name="keywords" content="html, css, js, tamagotchi"/>
-  <meta name="description" content="Async, await, promises and callback hell - it is and more in this pages."/>
+  <meta name="keywords" content="html, css, js, async, await, callback, promise"/>
+  <meta name="description" content="Async, await, promise and callback hell - it is and more in this pages."/>
   <meta name="url" content="">
   <meta name="subject" content="https://github.com/WebInfUa">
   <meta name="copyright" content="Vashchenko O.V.">
@@ -33,13 +33,13 @@
     </div>
     <div class="form-group">
       <label for="serverUrl">URL server address</label>
-      <input type="url" class="form-control" id="serverUrl" placeholder="server URL">
+      <input id="serverUrl" class="form-control" type="url" placeholder="server URL">
     </div>
     <div class="form-group">
-      <label for="serverResult">Request result</label>
+      <label for="serverResult">Result of request</label>
       <textarea id="serverResult" class="form-control" rows="5"></textarea>
     </div>
-      <button type="submit" class="btn btn-success" onclick="takeData()">Submit</button>
+      <button type="button" class="btn btn-success" onclick="takeData()">Submit</button>
       <button type="reset" class="btn btn-warning">Reset form</button>
   </form>
 </main>
