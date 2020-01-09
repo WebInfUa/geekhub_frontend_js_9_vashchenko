@@ -5,7 +5,6 @@
   import {signUpHTML, sign} from './scripts/sign.js';
   import {resetPasswordHTML, reset} from './scripts/reset.js';
   import {validEmail, validPassword, validName} from './scripts/validation.js';
-
   import './styles/main.scss';
   import './assets/images/user.png';
 
@@ -20,8 +19,6 @@
     insertText();
     insertText(logInHTML, content);
   }
-
-
 
   if (avatar.src.substr(-3) !== 'png' || avatar.src.substr(-3) !== 'jpg' ) {
     avatar.src = "images/user.png";
@@ -60,7 +57,6 @@
       resetForm();
     }
   });
-
 
 function loginForm () {
   const emailId = document.getElementById("emailId");
