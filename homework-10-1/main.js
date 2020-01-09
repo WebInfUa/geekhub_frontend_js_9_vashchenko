@@ -1,21 +1,28 @@
 'use strict';
 
 const getData= async (url) => {
-  let res = "Ou ou, we have some problem. Check you URL or try use default URL";
-  let data = await fetch(url);
-  if (data.ok) {
-    res = await data.text();
+  try {
+    const data = await fetch(url);
+    return await data.text();
+  } catch {
+    throw new Error('Ou ou, we have some problem. Check you URL or try use default URL.');
   }
-  return res;
 };
+
+const defaultUrl = 'https://my-json-server.typicode.com/typicode/demo/posts';
+const optionsRadio = document.getElementById('optionsRadios1');
+const serverUrl = document.getElementById('serverUrl');
+const serverResult = document.getElementById('serverResult');
+const defUrl = () => (
+  optionsRadio.checked
+    ? serverUrl.value = defaultUrl
+    : serverUrl.value = ''
+);
 
 const takeData = async () => {
-  const url = document.getElementById('serverUrl').value;
-  document.getElementById('serverResult').value = await getData(url);
+  const url = serverUrl.value;
+  serverResult.value = await getData(url);
 };
 
-const defUrl = () => (document.getElementById('optionsRadios1').checked === true) ?
-  document.getElementById('serverUrl').value='https://my-json-server.typicode.com/typicode/demo/posts' :
-  document.getElementById('serverUrl').value='';
-
-
+optionsRadio.addEventListener('click', defUrl());
+serverUrl.addEventListener('click', takeData());
