@@ -1,4 +1,4 @@
-export const logInHTML =
+export const logInHTML =``;
   "<h2 class='h2 font-weight-bold'>Log in</h2>" +
   "<a id='sign' class='mb-3 d-block' href='#sign' aria-label='Reset password' title='not a member'>Not a member</a>" +
   "<form id='logIn' class='form-group' action='' method='post'>" +
