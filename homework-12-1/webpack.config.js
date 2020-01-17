@@ -21,22 +21,25 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: "css-loader"
           }, {
-            loader: "sass-loader",
+            loader: "sass-loader"
           }
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
+          'style-loader',
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          {
+            loader: 'css-loader'
+          }
         ]
       },
       {
@@ -47,6 +50,19 @@ module.exports = {
           name: '[name].[ext]',
           outputPath: 'images',
         }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: 'assets/fonts',
+              name: '[name].[ext]',
+              outputPath: 'fonts'
+            }
+          }
+        ]
       }
     ]
   },

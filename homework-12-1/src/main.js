@@ -2,7 +2,12 @@
 
 import 'babel-polyfill';
 import './styles/main.scss';
+import './assets/fonts/themify.eot';
+import './assets/fonts/themify.svg';
+import './assets/fonts/themify.ttf';
+import './assets/fonts/themify.woff';
 import {loginForm} from './scripts/page/form.js';
+import {createElement} from "./scripts/func/createElement";
 import {header} from "./scripts/page/header.js";
 import './assets/images/logo.png';
 

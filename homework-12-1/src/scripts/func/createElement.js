@@ -47,13 +47,6 @@ export function createElement (out, name, attr, text, style) {
   parent.appendChild(element);
 }
 
-// export function createBtn(parentId) {
-//   (!parentId) ?  parentId = idGenerator() : parentId;
-//   createElement(
-//     {id: parentId}
-//   )
-// }
-
 function idGenerator() {
   return `f${(~~(Math.random()*1e4)).toString(20)}`;
 }
@@ -68,8 +61,8 @@ export class CreateElement {
     createElement({id: out}, 'div', {id: id, class: cssClass}, text, style);
   }
 
-  addLink(out, id, cssClass, href, text, style) {
-    createElement({id: out}, 'a', {id: id, class: cssClass, href: href}, text, style);
+  addLink(out, id, cssClass, href, title, ariaLabel, text, style) {
+    createElement({id: out}, 'a', {id: id, class: cssClass, href: href, title: title, 'aria-label': ariaLabel}, text, style);
   }
 
   addImage(out, id, cssClass, src, alt) {
