@@ -69,7 +69,7 @@ export class CreateElement {
   }
 
   addLink(out, id, cssClass, href, text, style) {
-    createElement({id: out}, 'a', {id: id, class: cssClass, href: 'href'}, text, style);
+    createElement({id: out}, 'a', {id: id, class: cssClass, href: href}, text, style);
   }
 
   addImage(out, id, cssClass, src, alt) {

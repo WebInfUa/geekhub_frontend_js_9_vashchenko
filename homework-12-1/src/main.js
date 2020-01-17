@@ -4,13 +4,13 @@ import 'babel-polyfill';
 import './styles/main.scss';
 import {loginForm} from './scripts/page/form.js';
 import {header} from "./scripts/page/header.js";
-import {createElement} from './scripts/func/createElement';
 import './assets/images/logo.png';
 
 let appStatus = false;
 if (appStatus === false) {
   appStatus = true;
   console.log('App in a live. App load status: '+ appStatus);
+  console.log(window.location.hostname);
   header();
 }
 

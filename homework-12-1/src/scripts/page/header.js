@@ -4,13 +4,11 @@ import '../../assets/images/ring.png';
 import '../../assets/images/photo.png';
 import {CreateElement} from "../func/createElement";
 
-
 export function header() {
   let logoHeader = new CreateElement();
   logoHeader.addDiv('header', 'headerLogo', 'logo');
   logoHeader.addLink('headerLogo', 'headerLogoLink', 'logo__link', '/');
   logoHeader.addImage('headerLogoLink', 'logoImg', 'logo__img', 'images/logo.png', 'Our app title - Virtus');
-
 
   let headerBtn = new CreateElement();
   headerBtn.addInput('header', 'addBtnHeader', 'addBtnHeade', 'button', '+Add', 'text in placeholder', 'inputClass', 'lableClass', 'Lable title text', '', {display: 'none'});
