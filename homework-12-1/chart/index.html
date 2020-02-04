@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>liteChart.js</title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+	
+    https://codyshop.ru/litechart-library-for-chart-creation/
+    
+    
+		<div id="your-id" style="height: 400px;"></div>
+    <div style="background: rgba(250, 250, 250, 0.5); width: 200px; height: 400px; position: relative; top: -400px; left: 400px"></div>
+		<script>
+      
+			document.addEventListener("DOMContentLoaded", function(){
+				// Create liteChart.js Object
+let d = new liteChart("chart", {
+	animate: {
+		show: true,
+		duration: 1,
+	},
+	axisX: {
+		show: true,
+		color: "#e9edf1",
+		width: 2,
+		value: "",
+		minValue: 0,
+		maxValue: 0,
+	},
+	axisY: {
+		show: true,
+		color: "#e9edf1",
+		width: 2,
+		value: "",
+		minValue: 0,
+		maxValue: 0,
+	},
+	eventCoord: {
+		x: 0,
+		y: 0,
+	},
+	fill: "gradient",
+	gridX: {
+		show: true,
+		interval: 100,
+		fill: 1,
+		label: {
+			show: true
+		},
+		stroke:"#111",
+		width: 2,
+		dasharray:"10 0",
+		linecap:"square",
+	},
+	gridY: {
+		show: true,
+		interval: 150,
+		fill: 1,
+		label: {
+			show: false
+		},
+		stroke:"#ff0000",
+		width:5,
+		dasharray:"0 1",
+		linecap:"square",
+	},
+	labels: {
+		show: true,
+		fontColor: "#c5c6d0",
+		fontSize: 12,
+		fontFamily: "sans-serif",
+		fontWeight: "normal",
+	},
+	legends: {
+		table: {
+			show: false,
+			position: {
+				x: "center",
+				y: 370,
+			},
+			direction: "horizontal",
+		},
+		fill: "#c5c6d0",
+	},
+	line: {
+		width: 4,
+		style: "curve",
+		shadow: true,
+		dasharray: null,
+	},
+	padding: {
+		top: 0,
+		right: 0,
+		bottom: 0,
+		left: 0,
+	},
+	point: {
+		show: true,
+		radius: 5,
+		strokeWidth: 5,
+		stroke: "#ffffff",
+	},
+	tooltip: {
+		show: true,
+		backgroundColor: "rgba(255, 255, 255, 0.8)",
+		fontColor: "#000000",
+	},
+	valueOnliteChart: {
+		show: false,
+	},
+} );
+
+				// Set labels
+				d.setLabels(["Monday", "Thu", "Wed", "Tue", "Fri", "Sat", "Sun"]);
+
+				// Set legends and values
+				d.addLegend({"name": "Day", "stroke": "#f00", "values": [100, 200, 450, 400, 500, 300, 700]});
+				// Inject chart into DOM object
+				let div = document.getElementById("your-id");
+				d.inject(div);
+
+				// Draw
+				d.draw();
+			});
+		</script>
+
+		<script src="lib/liteChart.js"></script>
+	</body>
+</html>
