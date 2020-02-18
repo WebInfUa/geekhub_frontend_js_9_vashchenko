@@ -1,0 +1,46 @@
+.navigation {
+  background-color: $background-color;
+  box-shadow: 0 3px 80px rgba(23, 24, 32, 0.2);
+  height: 100vh;
+  min-width: rem(100px, $fontSize);
+
+  &__list {
+    min-height: rem(400px, $fontSize);
+    @include flex($fd: column, $jc:space-around, $ai:center);
+  }
+}
+
+.info-navigation {
+  @include flex($jc: space-between);
+  padding: rem(30px, $fontSize) rem(30px, $fontSize);
+  box-shadow: 0 3px 80px rgba(23, 24, 32, 0.2);
+  background-color: $primary-color;
+  font-size: rem(16px, $fontSize);
+
+  &__item {
+    @include flex($jc: space-around, $ai: center);
+    min-width: rem(250px, $fontSize);
+    & p{
+      padding-right: rem(50px, $fontSize);
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+
+  &__sort {
+    & label {
+      margin-right: rem(20px, $fontSize);
+    }
+
+    & select {
+      border-radius: rem(100px, $fontSize);
+      border-color: $title-color;
+      color: $title-color;
+      padding:  rem(7px, $fontSize) rem(20px, $fontSize);
+      background-color: darken($primary-color, 10%);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+    }
+  }
+}
