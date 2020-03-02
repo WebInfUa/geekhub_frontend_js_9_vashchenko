@@ -1,11 +1,11 @@
 import {combineReducers} from "redux";
 
-import Login from './login';
+import Users from './users';
 import Projects from './project';
 
 // @ts-ignore
 const AllReducers = combineReducers({
-  login: Login,
+  login: Users,
   project: Projects
 });
 
