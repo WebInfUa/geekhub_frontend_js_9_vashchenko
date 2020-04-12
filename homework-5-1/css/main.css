@@ -28,7 +28,15 @@ html, body { font-size: 20px; background-color: #ffffff; }
 
 .color-accent { color: #f0454c; }
 
-.page-headers { font-size: 1.3rem; line-height: 1.3rem; color: #465065; font-family: "Montserrat", sans-serif; font-weight: 700; text-transform: uppercase; text-align: left; }
+.page-headers { 
+	font-size: 1.3rem; 
+	line-height: 1.3rem; 
+	color: #465065; 
+	font-family: "Montserrat", sans-serif; 
+	font-weight: 700; 
+	text-transform: uppercase; 
+	text-align: left; 
+}
 
 .page-headers--logo { font-size: 1rem; font-family: "Domine", serif; font-weight: 700; text-transform: capitalize; text-align: center; }
 
