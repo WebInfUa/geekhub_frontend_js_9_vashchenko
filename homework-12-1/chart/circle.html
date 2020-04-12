@@ -1,0 +1,61 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+      <span id="procent"></span>
+    </div>
+    
+    
+    <script>
+      
+      
+      function circle(value) {
+        let can = document.getElementById('canvas'),
+            spanProcent = document.getElementById('procent'),
+            c = can.getContext('2d');
+
+        let posX = can.width / 2,
+            posY = can.height / 2,
+            fps = 15,
+            procent = 0,
+            oneProcent = 360 / 100,
+            result = oneProcent * value,
+            deegres = 0
+            ;
+
+
+        c.lineCap = 'round';
+        arcMove();
+
+        function arcMove(){
+          let acrInterval = setInterval (function() {
+            deegres += 2;
+            c.clearRect( 0, 0, can.width, can.height );
+            procent = deegres / oneProcent;
+
+            spanProcent.innerHTML = `${procent.toFixed()} <span>text</span>`;
+
+            c.beginPath();
+            c.arc( posX, posY, 50, (Math.PI/360), (Math.PI*2));
+            c.strokeStyle = '#888888';
+            c.lineWidth = '10';
+            c.stroke();
+
+            c.beginPath();
+            c.strokeStyle = '#3949AB';
+            c.lineWidth = '10';
+            c.arc( posX, posY, 50, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
+            c.stroke();
+            if( deegres >= result ) clearInterval(acrInterval);
+          }, fps);
+
+        }
+      }
+
+      circle(15);
+    </script>
+  </body>
+</html>
+
